@@ -9,10 +9,34 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-    <main id="main" class="h-full w-full bg-slate-700">
+    <main id="main" class="h-full w-full animated-gradient">
         <slot></slot>
     </main>
 </Layout>
+
+<style>
+  .animated-gradient {
+    animation: gradient 48s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 0% 100%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+</style>
 
 <script is:inline>
   // Modified from https://www.foolishdeveloper.com/2021/10/random-gradient-generator.html
@@ -48,7 +72,11 @@ const { title } = Astro.props;
 
   const tailOrHead = () => Math.random() < 0.5;
 
-  const applyBackgroundToMain = (bg) => document.getElementById('main').style.background = bg;
+  const applyBackgroundToMain = (bg) => {
+    const mainEl = document.getElementById('main');
+    mainEl.style.background = bg;
+    mainEl.style.backgroundSize = '400% 400%';
+  }
 
   window.onload = () => applyBackgroundToMain(
     generateRandomGradientLinear(

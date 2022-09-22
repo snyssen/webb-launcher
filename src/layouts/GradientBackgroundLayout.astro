@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-    <main id="main" class="h-full w-full animated-gradient">
+    <main id="main" class="h-full w-full bg-slate-700 animated-gradient">
         <slot></slot>
     </main>
 </Layout>
@@ -81,7 +81,7 @@ const { title } = Astro.props;
   window.onload = () => applyBackgroundToMain(
     generateRandomGradientLinear(
       tailOrHead() ? 'linear' : 'radial',
-      Math.floor(1 + Math.random() * 5)
+      Math.floor(2 + Math.random() * 4)
     )
   );
 </script>

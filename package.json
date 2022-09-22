@@ -11,11 +11,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.2.8"
+    "astro": "^1.2.8",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
     "@astrojs/node": "^1.0.1",
     "@astrojs/tailwind": "^2.0.1",
+    "@types/js-yaml": "^4.0.5",
     "tailwindcss": "^3.1.8"
   }
 }

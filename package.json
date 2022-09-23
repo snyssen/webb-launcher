@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "astro": "^1.2.8",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "preline": "^1.2.1"
   },
   "devDependencies": {
     "@astrojs/node": "^1.0.1",

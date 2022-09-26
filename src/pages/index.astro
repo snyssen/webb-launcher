@@ -12,14 +12,15 @@ console.log('result: ', result);
 
 <GradientBackgroundLayout title="Welcome to Astro.">
 
-  <div class="h-full w-full p-4 lg:p-6 xl:p-12 flex flex-col space-y-2 lg:space-y-4 xl:space-y-8">
-    <div class="flex flex-row space-x-2">
-      <Clock></Clock>
-      <div class="flex-auto"></div>
+  <div class="h-full w-full p-4 lg:p-8 xl:p-12 flex flex-col space-y-2 lg:space-y-4 xl:space-y-8">
+    <div class="flex flex-col space-y-4">
+      <div class="flex flex-row space-x-2">
+        <Clock></Clock>
+        <div class="flex-auto"></div>
+      </div>
+      <SearchBar></SearchBar>
     </div>
-    <SearchBar></SearchBar>
-    <!-- <div class="bg-blue-500 h-12"></div> -->
-    <div class="bg-red-500 flex-auto"></div>
+
   </div>
 
 </GradientBackgroundLayout>

@@ -1,6 +1,11 @@
 ---
 const current = new Date();
 ---
+<div class="flex-auto flex flex-col">
+  <span id="clock-time" class="block">{current.toLocaleTimeString()}</span>
+  <span id="clock-date" class="block">{current.toLocaleDateString()}</span>
+</div>
+
 <script is:inline>
   setInterval(() => {
     const current = new Date();
@@ -8,8 +13,3 @@ const current = new Date();
     document.getElementById('clock-date').innerHTML = current.toLocaleDateString();
   }, 1000)
 </script>
-
-<div class="flex-auto flex flex-col">
-  <span id="clock-time" class="block">{current.toLocaleTimeString()}</span>
-  <span id="clock-date" class="block">{current.toLocaleDateString()}</span>
-</div>

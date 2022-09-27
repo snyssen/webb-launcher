@@ -1,8 +1,9 @@
 ---
 import LinksCard from './LinksCard.astro';
+import type { Link } from '../models/Link';
 
 import yaml from 'js-yaml';
-const links = yaml.load(import.meta.env.LINKS) as {[k: string]: string[]};
+const links = yaml.load(import.meta.env.LINKS) as {[k: string]: Link[]};
 const linksTitles: string[] = [];
 for (const title of Object.keys(links)) {
   linksTitles.push(title);

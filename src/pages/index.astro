@@ -3,6 +3,7 @@ import GradientBackgroundLayout from '../layouts/GradientBackgroundLayout.astro'
 import SearchBar from '../components/SearchBar.astro';
 import LinksGrid from '../components/LinksGrid.astro';
 import UpperLeftWidget from '../components/UpperLeftWidget.astro';
+import UpperRightWidget from '../components/UpperRightWidget.astro';
 ---
 
 <GradientBackgroundLayout title="Welcome to Astro.">
@@ -12,7 +13,7 @@ import UpperLeftWidget from '../components/UpperLeftWidget.astro';
       <div class="flex flex-row space-x-2">
         <UpperLeftWidget></UpperLeftWidget>
         <div class="flex-auto"></div>
-        <span class="block">Yet to come: weather widget</span>
+        <UpperRightWidget></UpperRightWidget>
       </div>
       <SearchBar></SearchBar>
     </div>

@@ -39,3 +39,20 @@ const { title } = Astro.props;
 	}
 
 </style>
+
+<style is:global>
+	@tailwind utilities;
+	@tailwind components;
+
+	@layer utilities {
+		.frosted-glass {
+			@apply backdrop-blur bg-gray-100/50 dark:bg-slate-800/50;
+		}
+	}
+
+	@layer components {
+		.frosted-glass-panel {
+			@apply frosted-glass shadow-sm rounded-xl p-4 md:p-5;
+		}
+	}
+</style>

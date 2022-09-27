@@ -27,22 +27,21 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style>
-	html {
-		font-family: system-ui, sans-serif;
-		height: 100vh;
-	}
-
-	body {
-		margin: 0;
-		height: 100vh;
-	}
-
-</style>
 
 <style is:global>
+	@tailwind base;
 	@tailwind utilities;
 	@tailwind components;
+
+	@layer base {
+		html {
+			@apply min-h-screen;
+		}
+
+		body {
+			@apply min-h-screen m-0;
+		}
+	}
 
 	@layer utilities {
 		.frosted-glass {

@@ -13,6 +13,11 @@ const { title, links } = Astro.props;
       { title }
     </p>
   </div>
-  <div class="p-4 md:p-5">
+  <div class="p-4 md:p-5 max-w-xs flex flex-col divide-y divide-gray-200 dark:divide-gray-700">
+    {links.map(link => (
+      <a class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium text-gray-800 dark:text-white hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600" href={link}>
+        {link}
+      </a>
+    ))}
   </div>
 </div>

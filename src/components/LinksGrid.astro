@@ -9,7 +9,7 @@ for (const title of Object.keys(links)) {
   linksTitles.push(title);
 }
 ---
-<div class="flex flex-row flex-wrap space-x-2 md:space-x-4 lg:space-x-8">
+<div class="flex flex-row flex-wrap gap-2 md:gap-4 lg:gap-8">
   {linksTitles.map(title => (
     <LinksCard title={title} links={links[title]}></LinksCard>
   ))}

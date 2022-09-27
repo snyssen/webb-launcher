@@ -1,0 +1,16 @@
+---
+import LinksCard from './LinksCard.astro';
+
+import yaml from 'js-yaml';
+const links = yaml.load(import.meta.env.LINKS) as Object;
+console.log('links: ', links);
+const linksTitles: string[] = [];
+for (const title of Object.keys(links)) {
+  linksTitles.push(title);
+}
+---
+<div class="flex flex-row flex-wrap space-x-2 space-y-2">
+  {linksTitles.map(title => (
+    <LinksCard title={title} links={links[title]}></LinksCard>
+  ))}
+</div>

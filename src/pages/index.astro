@@ -2,12 +2,7 @@
 import GradientBackgroundLayout from '../layouts/GradientBackgroundLayout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import Clock from '../components/Clock.astro';
-
-import yaml from 'js-yaml';
-console.log('raw: ', import.meta.env.LINKS);
-const result = yaml.load(import.meta.env.LINKS);
-console.log('result: ', result);
-
+import LinksGrid from '../components/LinksGrid.astro';
 ---
 
 <GradientBackgroundLayout title="Welcome to Astro.">
@@ -20,7 +15,7 @@ console.log('result: ', result);
       </div>
       <SearchBar></SearchBar>
     </div>
-
+    <LinksGrid></LinksGrid>
   </div>
 
 </GradientBackgroundLayout>

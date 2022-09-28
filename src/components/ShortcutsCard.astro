@@ -1,5 +1,6 @@
 ---
 import type { Shortcut } from '../models/Shortcut';
+import Accordion from './Accordion.astro';
 
 export interface Props {
   shortcut: Shortcut;
@@ -19,12 +20,33 @@ const { shortcut } = Astro.props;
     </p>
   </div>
   <div class="p-4 md:p-5 flex flex-col divide-y divide-gray-200 dark:divide-gray-700">
-    {(shortcut.children as Shortcut[]).map(sh => ( // TODO: Allow shortcuts to have children
-      <a href={sh.url} class="inline-flex justify-center items-center gap-x-2 py-3 px-4 text-sm font-medium text-center
-      hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600">
-        {sh.icon_classes && <i class={sh.icon_classes}></i>}
-        {sh.url}
-      </a>
-    ))}
+    {(shortcut.children as Shortcut[]).map(sh => {
+      if (sh.children && sh.children.length > 0)
+        return (
+          <Accordion title={sh.name} icon_classes={sh.icon_classes}>
+            <div class="flex flex-col justify-center items-center w-4/5 mx-auto
+              divide-y divide-gray-200 dark:divide-gray-700
+            ">
+              {sh.children.map(shChild => (
+                <a href={shChild.url} class="inline-flex justify-center items-center py-3 px-4
+                hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600
+                ">
+                  {shChild.icon_classes && <i class={shChild.icon_classes}></i>}
+                  {shChild.url}
+                </a>
+              ))}
+            </div>
+          </Accordion>
+        );
+      else
+        return (
+          <a href={sh.url} class="inline-flex justify-center items-center py-3 px-4
+          hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600
+          ">
+            {sh.icon_classes && <i class={sh.icon_classes}></i>}
+            {sh.url}
+          </a>
+        );
+    })}
   </div>
 </div>

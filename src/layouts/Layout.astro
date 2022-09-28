@@ -1,4 +1,6 @@
 ---
+import '../assets/css/line-awesome.min.css'
+
 export interface Props {
 	title: string;
 }
@@ -21,7 +23,7 @@ const { title } = Astro.props;
 			} else {
 					document.documentElement.classList.remove('dark')
 			}
-	</script>
+		</script>
 	</head>
 	<body class="text-gray-900 dark:text-gray-100">
 		<slot />

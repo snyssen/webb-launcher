@@ -1,9 +1,18 @@
 ---
 import GradientBackgroundLayout from '../layouts/GradientBackgroundLayout.astro';
 import SearchBar from '../components/SearchBar.astro';
-import LinksGrid from '../components/LinksGrid.astro';
 import UpperLeftWidget from '../components/UpperLeftWidget.astro';
 import UpperRightWidget from '../components/UpperRightWidget.astro';
+import ShortcutsGrid from '../components/ShortcutsGrid.astro';
+
+import yaml from 'js-yaml';
+import type { Shortcut } from '../models/Shortcut';
+
+const shortcuts = yaml.load(import.meta.env.SHORTCUTS) as Shortcut[] | undefined | string;
+if (!shortcuts || shortcuts === 'undefined')
+  return new Response('Environment variable "SHORTCUTS" is undefined or not in valid yaml', {
+    status: 500
+  });
 ---
 
 <GradientBackgroundLayout title="Welcome to Astro.">
@@ -17,7 +26,7 @@ import UpperRightWidget from '../components/UpperRightWidget.astro';
       </div>
       <SearchBar></SearchBar>
     </div>
-    <LinksGrid></LinksGrid>
+    <ShortcutsGrid shortcuts={shortcuts as Shortcut[]}></ShortcutsGrid>
   </div>
 
 </GradientBackgroundLayout>

@@ -6,6 +6,10 @@ trigger:
   branch:
     - main
 steps:
+  - name: set semver
+    image: cedrichopf/drone-semver # See https://github.com/cedrichopf/drone-semver
+    settings:
+      autoincrement: true
   - name: build and publish container image
     image: plugins/docker
     settings:

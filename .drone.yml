@@ -1,0 +1,19 @@
+---
+kind: pipeline
+name: production
+type: docker
+trigger:
+  branch:
+    - main
+steps:
+  - name: build and publish container image
+    image: plugins/docker
+    settings:
+      registry: git.snyssen.be
+      username: ${DRONE_COMMIT_AUTHOR}
+      password:
+        from_secret: gitea_access_token
+      repo: "git.snyssen.be/${DRONE_REPO}"
+      tags:
+        - ${DRONE_BRANCH}
+        - latest

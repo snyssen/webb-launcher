@@ -5,14 +5,26 @@ import UpperLeftWidget from '../components/UpperLeftWidget.astro';
 import UpperRightWidget from '../components/UpperRightWidget.astro';
 import ShortcutsGrid from '../components/ShortcutsGrid.astro';
 
-import yaml from 'js-yaml';
+import yaml, { YAMLException } from 'js-yaml';
 import type { Shortcut } from '../models/Shortcut';
 
-const shortcuts = yaml.load(import.meta.env.SHORTCUTS) as Shortcut[] | undefined | string;
-if (!shortcuts || shortcuts === 'undefined')
-  return new Response('Environment variable "SHORTCUTS" is undefined or not in valid yaml', {
+let shortcuts: Shortcut[] | unknown;
+try {
+  shortcuts = yaml.load(import.meta.env.SHORTCUTS, {
+    onWarning: (warning: YAMLException) =>
+      console.warn('Yaml loading returned a warning.', warning)
+  });
+  if (!shortcuts || shortcuts === 'undefined')
+    return new Response('Environment variable "SHORTCUTS" is undefined or not in valid yaml', {
+      status: 500
+    });
+} catch (error) {
+  console.error('Failed to load yaml shortcuts.', error);
+  return new Response('Failed to load yaml shortcuts.', {
     status: 500
   });
+}
+
 ---
 
 <GradientBackgroundLayout title="Welcome to Astro.">

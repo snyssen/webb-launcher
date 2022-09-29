@@ -10,10 +10,12 @@ steps:
     image: cedrichopf/drone-semver # See https://github.com/cedrichopf/drone-semver
     settings:
       autoincrement: true
-  - name: build and publish container image
-    image: plugins/docker
+  - name: export semver
+    image: debian
     commands:
       - export SEMVER=`cat semver`
+  - name: build and publish container image
+    image: plugins/docker
     settings:
       registry: git.snyssen.be
       username: ${DRONE_COMMIT_AUTHOR}

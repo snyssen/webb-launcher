@@ -9,15 +9,30 @@ data:
     - ${DRONE_BRANCH}
     - latest
 ---
-kind: template
-load: docker_image.yaml
+kind: pipeline
+name: tag_debug
+type: docker
 trigger:
   event:
     - tag
-data:
-  tags:
-    - ${DRONE_TAG}
-    - ${DRONE_SEMVER_MAJOR}
-    - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
-    - ${DRONE_SEMVER}
-    - latest
+steps:
+  - name: Debugging environment variables
+    image: debian
+    commands:
+      - echo "${DRONE_TAG}"
+      - echo "${DRONE_SEMVER_MAJOR}"
+      - echo "${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}"
+      - echo "${DRONE_SEMVER}"
+
+# kind: template
+# load: docker_image.yaml
+# trigger:
+#   event:
+#     - tag
+# data:
+#   tags:
+#     - ${DRONE_TAG}
+#     - ${DRONE_SEMVER_MAJOR}
+#     - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
+#     - ${DRONE_SEMVER}
+#     - latest

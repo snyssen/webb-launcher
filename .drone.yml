@@ -1,28 +1,20 @@
 ---
-kind: pipeline
-name: production
-type: docker
+kind: template
+load: docker_image.yaml
 trigger:
   branch:
     - main
-steps:
-  - name: set semver
-    image: cedrichopf/drone-semver # See https://github.com/cedrichopf/drone-semver
-    settings:
-      autoincrement: true
-  - name: export semver
-    image: debian
-    commands:
-      - export SEMVER=`cat semver`
-  - name: build and publish container image
-    image: plugins/docker
-    settings:
-      registry: git.snyssen.be
-      username: ${DRONE_COMMIT_AUTHOR}
-      password:
-        from_secret: gitea_access_token
-      repo: "git.snyssen.be/${DRONE_REPO}"
-      tags:
-        - ${DRONE_BRANCH}
-        - latest
-        - ${SEMVER}
+data:
+  tags:
+    - ${DRONE_BRANCH}
+    - latest
+---
+kind: template
+load: docker_image.yaml
+trigger:
+  event:
+    - tag
+data:
+  tags:
+    - ${DRONE_SEMVER}
+    - latest

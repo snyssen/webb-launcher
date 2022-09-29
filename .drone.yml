@@ -17,6 +17,7 @@ steps:
       tags:
         - ${DRONE_SEMVER_MAJOR}
         - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
+        - ${DRONE_SEMVER}
         - latest
 ---
 kind: pipeline

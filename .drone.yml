@@ -17,3 +17,4 @@ steps:
       tags:
         - ${DRONE_BRANCH}
         - latest
+        - ${DRONE_SEMVER}

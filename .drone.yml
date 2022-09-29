@@ -14,6 +14,7 @@ steps:
       password:
         from_secret: gitea_access_token
       repo: "git.snyssen.be/${DRONE_REPO}"
+      build_args: VERSION="${DRONE_SEMVER}"
       tags:
         - ${DRONE_SEMVER_MAJOR}
         - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
@@ -37,6 +38,7 @@ steps:
       password:
         from_secret: gitea_access_token
       repo: "git.snyssen.be/${DRONE_REPO}"
+      build_args: VERSION="built from ${DRONE_BRANCH}"
       tags:
         - ${DRONE_BRANCH}
         - latest

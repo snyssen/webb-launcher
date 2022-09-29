@@ -8,21 +8,29 @@ import ShortcutsGrid from '../components/ShortcutsGrid.astro';
 import yaml, { YAMLException } from 'js-yaml';
 import type { Shortcut } from '../models/Shortcut';
 
+const logAndReturnError = (logMessage: string, clientMessage: string, error?: any) => {
+  console.error(logMessage, error);
+  return new Response(clientMessage, {
+      status: 500
+    });
+}
+
+let shortcutsRaw: string | undefined = import.meta.env.SHORTCUTS;
+if (!shortcutsRaw)
+  shortcutsRaw = process.env.SHORTCUTS;
+if (!shortcutsRaw)
+  return logAndReturnError('Environment variable "SHORTCUTS" is undefined.', 'Environment variable "SHORTCUTS" is undefined.');
+
 let shortcuts: Shortcut[] | unknown;
 try {
-  shortcuts = yaml.load(import.meta.env.SHORTCUTS, {
+  shortcuts = yaml.load(shortcutsRaw as string, {
     onWarning: (warning: YAMLException) =>
       console.warn('Yaml loading returned a warning.', warning)
   });
   if (!shortcuts || shortcuts === 'undefined')
-    return new Response('Environment variable "SHORTCUTS" is undefined or not in valid yaml', {
-      status: 500
-    });
+    return logAndReturnError('Environment variable "SHORTCUTS" is not valid yaml.', 'Environment variable "SHORTCUTS" is not valid yaml.');
 } catch (error) {
-  console.error('Failed to load yaml shortcuts.', error);
-  return new Response('Failed to load yaml shortcuts.', {
-    status: 500
-  });
+  return logAndReturnError('Failed to load yaml shortcuts.', 'Failed to load yaml shortcuts.', error);
 }
 
 ---

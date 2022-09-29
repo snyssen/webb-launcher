@@ -1,18 +1,6 @@
 ---
-kind: template
-load: docker_image.yaml
-trigger:
-  branch:
-    - main
-  event:
-    - push
-data:
-  tags:
-    - ${DRONE_BRANCH}
-    - latest
----
 kind: pipeline
-name: tag_debug
+name: versioned_docker
 type: docker
 trigger:
   event:
@@ -25,16 +13,28 @@ steps:
       - echo "${DRONE_SEMVER_MAJOR}"
       - echo "${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}"
       - echo "${DRONE_SEMVER}"
-
-# kind: template
-# load: docker_image.yaml
-# trigger:
-#   event:
-#     - tag
-# data:
-#   tags:
-#     - ${DRONE_TAG}
-#     - ${DRONE_SEMVER_MAJOR}
-#     - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
-#     - ${DRONE_SEMVER}
-#     - latest
+---
+kind: pipeline
+name: main_docker
+type: docker
+trigger:
+  branch:
+    - main
+  event:
+    - push
+steps:
+  - name: Hello world
+    image: debian
+    commands:
+      - echo "Hello world"
+  # - name: build and publish container image
+  #   image: plugins/docker
+  #   settings:
+  #     registry: git.snyssen.be
+  #     username: ${DRONE_COMMIT_AUTHOR}
+  #     password:
+  #       from_secret: gitea_access_token
+  #     repo: "git.snyssen.be/${DRONE_REPO}"
+  #     tags:
+  #       - ${DRONE_BRANCH}
+  #       - latest

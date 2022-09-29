@@ -16,6 +16,7 @@ trigger:
     - tag
 data:
   tags:
+    - ${DRONE_TAG}
     - ${DRONE_SEMVER_MAJOR}
     - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
     - ${DRONE_SEMVER}

@@ -4,6 +4,8 @@ load: docker_image.yaml
 trigger:
   branch:
     - main
+  event:
+    - push
 data:
   tags:
     - ${DRONE_BRANCH}

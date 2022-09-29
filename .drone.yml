@@ -6,13 +6,18 @@ trigger:
   event:
     - tag
 steps:
-  - name: Debugging environment variables
-    image: debian
-    commands:
-      - echo "${DRONE_TAG}"
-      - echo "${DRONE_SEMVER_MAJOR}"
-      - echo "${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}"
-      - echo "${DRONE_SEMVER}"
+  - name: build and publish container image
+    image: plugins/docker
+    settings:
+      registry: git.snyssen.be
+      username: ${DRONE_COMMIT_AUTHOR}
+      password:
+        from_secret: gitea_access_token
+      repo: "git.snyssen.be/${DRONE_REPO}"
+      tags:
+        - ${DRONE_SEMVER_MAJOR}
+        - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
+        - latest
 ---
 kind: pipeline
 name: main_docker
@@ -23,18 +28,14 @@ trigger:
   event:
     - push
 steps:
-  - name: Hello world
-    image: debian
-    commands:
-      - echo "Hello world"
-  # - name: build and publish container image
-  #   image: plugins/docker
-  #   settings:
-  #     registry: git.snyssen.be
-  #     username: ${DRONE_COMMIT_AUTHOR}
-  #     password:
-  #       from_secret: gitea_access_token
-  #     repo: "git.snyssen.be/${DRONE_REPO}"
-  #     tags:
-  #       - ${DRONE_BRANCH}
-  #       - latest
+  - name: build and publish container image
+    image: plugins/docker
+    settings:
+      registry: git.snyssen.be
+      username: ${DRONE_COMMIT_AUTHOR}
+      password:
+        from_secret: gitea_access_token
+      repo: "git.snyssen.be/${DRONE_REPO}"
+      tags:
+        - ${DRONE_BRANCH}
+        - latest

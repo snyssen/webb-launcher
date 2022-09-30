@@ -22,11 +22,9 @@ steps:
         - latest
 ---
 kind: pipeline
-name: main_docker
+name: branches_docker
 type: docker
 trigger:
-  branch:
-    - main
   event:
     - push
 steps:

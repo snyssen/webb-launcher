@@ -1,7 +1,10 @@
 version: '3'
 services:
   webb-launcher:
-    build: .
+    build:
+      context: .
+      args:
+        LAUNCHER_VERSION: dev
     env_file:
       - ./.env
     ports:

@@ -1,4 +1,5 @@
 FROM node:18
+ARG LAUNCHER_VERSION
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install

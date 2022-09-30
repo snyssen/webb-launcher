@@ -9,4 +9,3 @@ const port = 8080;
 app.listen(port);
 
 console.log('Webb launcher version', process.env.LAUNCHER_VERSION ?? 'unkown', 'listening on port:', port);
-console.log('process.env: ', process.env);

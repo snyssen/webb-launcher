@@ -39,4 +39,3 @@ steps:
       build_args: LAUNCHER_VERSION=built from branch ${DRONE_BRANCH}
       tags:
         - ${DRONE_BRANCH}
-        - latest

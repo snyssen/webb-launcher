@@ -28,7 +28,7 @@ const { shortcut } = Astro.props;
             ">
               {sh.children.map(shChild => (
                 <a href={shChild.url} class="inline-flex justify-center items-center py-3 px-4 w-full
-                hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600
+                hover:text-pink-500 focus:z-10 focus:text-pink-500 dark:hover:text-pink-500
                   first:border-t first:border-gray-200 dark:first:border-gray-700
                 ">
                   {shChild.icon_classes && <i class={shChild.icon_classes}></i>}
@@ -41,7 +41,7 @@ const { shortcut } = Astro.props;
       else
         return (
           <a href={sh.url} class="inline-flex justify-center items-center py-3 px-4
-          hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600
+          hover:text-pink-500 focus:z-10 focus:text-pink-500 dark:hover:text-pink-500
           ">
             {sh.icon_classes && <i class={sh.icon_classes}></i>}
             {sh.name}

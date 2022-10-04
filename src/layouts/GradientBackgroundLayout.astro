@@ -11,86 +11,17 @@ const version = import.meta.env.LAUNCHER_VERSION ?? process.env.LAUNCHER_VERSION
 ---
 
 <Layout title={title}>
-  <div id="wrapper" class="min-h-screen bg-slate-700 animated-gradient flex flex-col">
+  <div id="wrapper" class="min-h-screen min-w-fit
+    bg-gradient-to-tr from-cyan-400 to-fuchsia-600
+    flex flex-col
+  ">
     <main class="flex-1">
       <slot></slot>
     </main>
     <footer class="frosted-glass p-2">
-      <p class="text-right">Webb launcher {version} - ©2022 snyssen -
+      <p class="text-right">Webb launcher {version} - built with {Astro.generator} - ©2022 snyssen -
         <a href="https://git.snyssen.be/snyssen/webb-launcher" class="underline hover:text-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:hover:text-blue-600">Source</a>
       </p>
     </footer>
   </div>
 </Layout>
-
-<style>
-  .animated-gradient {
-    animation: gradient 48s ease infinite;
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 0%;
-    }
-    25% {
-      background-position: 0% 100%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    75% {
-      background-position: 100% 0%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-</style>
-
-<script is:inline>
-  // Modified from https://www.foolishdeveloper.com/2021/10/random-gradient-generator.html
-  const hexString = "0123456789abcdef";
-
-  const generateRandomColorHex = () => {
-    let hexCode = "#";
-    for( i=0; i<6; i++){
-        hexCode += hexString[Math.floor(Math.random() * hexString.length)];
-    }
-    return hexCode;
-  }
-
-  const generateRandomGradientLinear = (type, nbrColors) => {
-    if (type !== 'linear' && type !== 'radial')
-      throw "Gradient type must either be 'linear' or 'radial'!"
-
-    let colors = [];
-    for (let index = 0; index < nbrColors; index++) {
-      colors.push(generateRandomColorHex())
-    }
-
-    let bgValue = `${type}-gradient(`;
-    if (type === 'linear')
-      bgValue += `${Math.floor(Math.random() * 360)}deg`;
-    else
-      bgValue += `circle`;
-
-    colors.forEach(color => bgValue += `,${color}`);
-
-    return bgValue + ')';
-  }
-
-  const tailOrHead = () => Math.random() < 0.5;
-
-  const applyBackgroundToWrapper = (bg) => {
-    const wrapper = document.getElementById('wrapper');
-    wrapper.style.background = bg;
-    wrapper.style.backgroundSize = '300% 300%';
-  }
-
-  window.onload = () => applyBackgroundToWrapper(
-    generateRandomGradientLinear(
-      tailOrHead() ? 'linear' : 'radial',
-      Math.floor(2 + Math.random() * 4)
-    )
-  );
-</script>

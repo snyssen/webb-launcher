@@ -14,7 +14,7 @@ const { shortcut } = Astro.props;
 ">
   <div class="w-full bg-gray-100/60 dark:bg-slate-800/60 rounded-t-xl p-2 md:p-4">
     <p class="mt-1 text-xl md:text-2xl font-extrabold text-center">
-      {shortcut.icon_classes && <i class={shortcut.icon_classes}></i>}
+      {shortcut.icon_classes && <i class:list={[shortcut.icon_classes, 'text-2xl']}></i>}
       {shortcut.name}
     </p>
   </div>
@@ -30,7 +30,7 @@ const { shortcut } = Astro.props;
                   bg-clip-text bg-300% hover:animate-gradient-pulse-once
                   hover:text-transparent hover:bg-gradient-to-r
                 ">
-                  {shChild.icon_classes && <i class={shChild.icon_classes}></i>}
+                  {shChild.icon_classes && <i class:list={[shChild.icon_classes, 'text-2xl']}></i>}
                   {shChild.name}
                 </a>
               ))}
@@ -43,7 +43,7 @@ const { shortcut } = Astro.props;
             bg-clip-text bg-300% hover:animate-gradient-pulse-once
             hover:text-transparent hover:bg-gradient-to-r
           ">
-            {sh.icon_classes && <i class={sh.icon_classes}></i>}
+            {sh.icon_classes && <i class:list={[sh.icon_classes, 'text-2xl']}></i>}
             {sh.name}
           </a>
         );

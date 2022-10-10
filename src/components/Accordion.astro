@@ -13,7 +13,7 @@ const {title, icon_classes} = Astro.props;
   hover:marker:text-gray-900 dark:hover:marker:text-gray-100
   ">
     {title}
-    {icon_classes && <i class={icon_classes}></i>}
+    {icon_classes && <i class:list={[icon_classes, 'text-2xl']}></i>}
   </summary>
   <slot></slot>
 </details>

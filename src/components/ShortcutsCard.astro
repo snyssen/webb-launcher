@@ -18,19 +18,17 @@ const { shortcut } = Astro.props;
       {shortcut.name}
     </p>
   </div>
-  <div class="p-4 md:p-5 text-lg md:text-xl font-semibold flex flex-col divide-y divide-gray-200 dark:divide-gray-700">
+  <div class="p-4 md:p-5 text-lg md:text-xl font-semibold flex flex-col">
     {(shortcut.children as Shortcut[]).map(sh => {
       if (sh.children && sh.children.length > 0)
         return (
           <Accordion title={sh.name} icon_classes={sh.icon_classes}>
-            <div class="flex flex-col justify-center items-center w-4/5 mx-auto
-              divide-y divide-gray-200 dark:divide-gray-700
+            <div class="flex flex-col ml-8
             ">
               {sh.children.map(shChild => (
-                <a href={shChild.url} class="inline-flex justify-center items-center py-3 px-4 w-full
+                <a href={shChild.url} class="inline-flex justify-start items-center py-3 px-4
                   bg-clip-text bg-300% hover:animate-gradient-pulse-once
                   hover:text-transparent hover:bg-gradient-to-r
-                  first:border-t first:border-gray-200 dark:first:border-gray-700
                 ">
                   {shChild.icon_classes && <i class={shChild.icon_classes}></i>}
                   {shChild.name}
@@ -41,7 +39,7 @@ const { shortcut } = Astro.props;
         );
       else
         return (
-          <a href={sh.url} class="inline-flex justify-center items-center py-3 px-4
+          <a href={sh.url} class="inline-flex justify-start items-center py-3 px-4
             bg-clip-text bg-300% hover:animate-gradient-pulse-once
             hover:text-transparent hover:bg-gradient-to-r
           ">

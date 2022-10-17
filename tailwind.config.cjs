@@ -26,7 +26,7 @@ module.exports = {
 				}
 			},
 			animation: {
-				'gradient-pulse-once': 'gradient-slide-left-right 0.5s ease-out forwards'
+				'gradient-pulse-once': 'gradient-slide-left-right 1.5s ease-out forwards'
 			},
 			screens: {
 				// Support for large screens (2K and 4K)

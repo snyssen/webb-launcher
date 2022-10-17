@@ -9,6 +9,8 @@ Webb Launcher is a minimalist starting page/personal dashboard mainly aimed at s
 
 Built with [Astro](https://astro.build), Webb Launcher is an homage to the [James Webb space telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope) and its [Ariane 5](https://en.wikipedia.org/wiki/Ariane_5) launcher.
 
+> **NOTE:** The GitHub repository is a mirror of the original repository, where the actual development work is done.
+
 ## How to use
 
 The recommended approach is with docker-compose and an accompanying .env file for your list of shortcuts:

@@ -9,7 +9,7 @@ Webb Launcher is a minimalist starting page/personal dashboard mainly aimed at s
 
 Built with [Astro](https://astro.build), Webb Launcher is an homage to the [James Webb space telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope) and its [Ariane 5](https://en.wikipedia.org/wiki/Ariane_5) launcher.
 
-> **NOTE:** The [GitHub repository](https://github.com/snyssen/webb-launcher) is a mirror of the [original repository](https://git.snyssen.be/snyssen/webb-launcher), where the actual development work is done. You may however file any issue you have with this project here.
+> **NOTE:** The [GitHub repository](https://github.com/snyssen/webb-launcher) is a mirror of the [original repository](https://git.snyssen.be/snyssen/webb-launcher), where the actual development work is done. You may however file any issue you have with this project on the GitHub repository.
 
 ## How to use
 

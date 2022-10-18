@@ -1,6 +1,6 @@
 # Webb Launcher
 
-[![Build Status](https://drone.snyssen.be/api/badges/snyssen/webb-launcher/status.svg?ref=refs/heads/main)](https://drone.snyssen.be/snyssen/webb-launcher) [![Latest Docker image](https://img.shields.io/badge/Docker%20image-latest-blue)](https://git.snyssen.be/snyssen/-/packages/container/webb-launcher/latest)
+[![Build Status](https://drone.snyssen.be/api/badges/snyssen/webb-launcher/status.svg?ref=refs/heads/main)](https://drone.snyssen.be/snyssen/webb-launcher) [![Latest Docker image](https://img.shields.io/badge/Docker%20image-latest-blue)](https://git.snyssen.be/snyssen/-/packages/container/webb-launcher/latest) ![GitHub](https://img.shields.io/github/license/snyssen/webb-launcher)
 
 | ![Mockup of white theme](white-theme-mockup.png) | ![Mockup of dark theme](dark-theme-mockup.png) |
 | ------------------------------------------------ | ---------------------------------------------- |

@@ -1,71 +1,34 @@
 import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import type { Weather } from "../models/Weather";
-import { ExtractValueFromInputEvent } from "../utils/FormsUtils";
+import WeatherForm from "./WeatherForm";
+import { useStore } from "@nanostores/preact";
+import { isShowingWeather } from "../stores/weatherStore";
 
 export default function WeatherComponent() {
-  const [country, setCountry] = useState<string>();
-  const [city, setCity] = useState<string>();
+  const $isShowingWeather = useStore(isShowingWeather);
 
-  const countryInput = (e: InputEvent) =>
-    setCountry(ExtractValueFromInputEvent(e));
-  const cityInput = (e: InputEvent) => setCity(ExtractValueFromInputEvent(e));
-
-  const submit = async (e: SubmitEvent) => {
-    e.preventDefault();
-    await fetchWeather();
-  };
-
-  const fetchWeather = async () => {
-    const weatherResponse = await fetch(`/weather/${country}/${city}`);
-    if (!weatherResponse.ok) {
-      console.error(
-        "unexpected response from weather API: ",
-        await weatherResponse.text()
-      );
-      return;
-    }
-    const weather: Weather = await weatherResponse.json();
-    console.log("weather: ", weather);
+  const toggleWeather = () => {
+    isShowingWeather.set(!$isShowingWeather);
   };
 
   return (
-    <form className="flex flex-wrap justify-end gap-2" onSubmit={submit}>
-      <div>
-        <label for="country-input" className="sr-only"></label>
-        <input
-          id="country-input"
-          className="rounded-xl frosted-glass
-              p-2 w-32
-              focus:z-10 focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700"
-          placeholder="Country"
-          type="text"
-          value={country}
-          onInput={countryInput}
-        />
-      </div>
-      <div>
-        <label for="city-input" className="sr-only"></label>
-        <input
-          id="city-input"
-          className="rounded-xl frosted-glass
-              p-2 w-32
-              focus:z-10 focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700"
-          placeholder="City"
-          type="text"
-          value={city}
-          onInput={cityInput}
-        />
-      </div>
+    <div className="flex flex-row gap-2 justify-start items-start">
+      {$isShowingWeather ? <p>WIP</p> : <WeatherForm />}
       <button
-        className="bg-gray-50/50 dark:bg-gray-700/50
-            hover:bg-gray-50 dark:hover:bg-gray-700
-            focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700
-            rounded-xl text-sm font-bold p-2"
-        type="submit"
+        id="weather-form-toggle"
+        type="button"
+        onClick={toggleWeather}
+        className="w-min
+        bg-gray-50/50 dark:bg-gray-700/50
+        hover:bg-gray-50 dark:hover:bg-gray-700
+        focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700
+        rounded-xl p-2"
       >
-        Get weather
+        {$isShowingWeather ? (
+          <i className="las la-chevron-circle-left"></i>
+        ) : (
+          <i className="las la-chevron-circle-right"></i>
+        )}
       </button>
-    </form>
+    </div>
   );
 }

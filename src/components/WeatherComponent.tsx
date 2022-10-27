@@ -6,9 +6,13 @@ import WeatherView from "./WeatherView";
 import { ExpirableCache } from "../utils/ExpirableCache";
 
 export default function WeatherComponent({
+  enabled = false,
   tempUnit = "°",
   speedUnit = "km/h",
 }) {
+  if (!enabled)
+    return <p>An Open Weather API key is required for the weather feature.</p>;
+
   const $isShowingWeather = useStore(isShowingWeather);
 
   const toggleWeather = () => {

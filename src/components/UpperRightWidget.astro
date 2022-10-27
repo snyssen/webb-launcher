@@ -4,11 +4,12 @@ import { OpenWeatherConfig } from "../configuration/OpenWeatherConfig";
 
 const tempUnit = OpenWeatherConfig.getDisplayableTempUnit();
 const speedUnit = OpenWeatherConfig.getDisplayableSpeedUnit();
+const isWeatherEnabled = OpenWeatherConfig.isApiKeyDefined();
 ---
 
 <div class="flex flex-col shrink
   frosted-glass-panel p-4 md:p-5
   md:max-w-sm lg:max-w-md
 ">
-  <WeatherComponent client:idle tempUnit={tempUnit} speedUnit={speedUnit}/>
+  <WeatherComponent client:idle tempUnit={tempUnit} speedUnit={speedUnit} enabled={isWeatherEnabled}/>
 </div>

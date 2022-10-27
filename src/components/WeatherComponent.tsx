@@ -5,7 +5,10 @@ import { isShowingWeather, weather } from "../stores/weatherStore";
 import WeatherView from "./WeatherView";
 import { ExpirableCache } from "../utils/ExpirableCache";
 
-export default function WeatherComponent() {
+export default function WeatherComponent({
+  tempUnit = "°",
+  speedUnit = "km/h",
+}) {
   const $isShowingWeather = useStore(isShowingWeather);
 
   const toggleWeather = () => {
@@ -17,7 +20,11 @@ export default function WeatherComponent() {
 
   return (
     <div className="flex flex-row gap-2 justify-start items-start">
-      {$isShowingWeather ? <WeatherView /> : <WeatherForm />}
+      {$isShowingWeather ? (
+        <WeatherView tempUnit={tempUnit} speedUnit={speedUnit} />
+      ) : (
+        <WeatherForm />
+      )}
       <button
         id="weather-form-toggle"
         type="button"

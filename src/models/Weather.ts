@@ -1,7 +1,7 @@
 // See https://openweathermap.org/current#current_JSON
 export interface WeatherResponse {
   coord: Coordinates;
-  weather: Weather;
+  weather: Weather[];
   base: string;
   main: WeatherMain;
   visibility: number;

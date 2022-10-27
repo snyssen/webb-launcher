@@ -36,7 +36,7 @@ export default function WeatherComponent() {
         <input
           id="country-input"
           className="rounded-xl frosted-glass
-              py-1 px-2 w-32
+              p-2 w-32
               focus:z-10 focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700"
           placeholder="Country"
           type="text"
@@ -49,7 +49,7 @@ export default function WeatherComponent() {
         <input
           id="city-input"
           className="rounded-xl frosted-glass
-              py-1 px-2 w-32
+              p-2 w-32
               focus:z-10 focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700"
           placeholder="City"
           type="text"
@@ -61,7 +61,7 @@ export default function WeatherComponent() {
         className="bg-gray-50/50 dark:bg-gray-700/50
             hover:bg-gray-50 dark:hover:bg-gray-700
             focus:outline-none focus:ring focus:ring-gray-50 dark:focus:ring-gray-700
-            rounded-xl text-sm p-2"
+            rounded-xl text-sm font-bold p-2"
         type="submit"
       >
         Get weather

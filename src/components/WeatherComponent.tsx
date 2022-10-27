@@ -1,8 +1,9 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import type { Weather } from "../models/Weather";
 import { ExtractValueFromInputEvent } from "../utils/FormsUtils";
 
-export default function Weather() {
+export default function WeatherComponent() {
   const [country, setCountry] = useState<string>();
   const [city, setCity] = useState<string>();
 
@@ -24,7 +25,8 @@ export default function Weather() {
       );
       return;
     }
-    console.log("weather: ", await weatherResponse.json());
+    const weather: Weather = await weatherResponse.json();
+    console.log("weather: ", weather);
   };
 
   return (

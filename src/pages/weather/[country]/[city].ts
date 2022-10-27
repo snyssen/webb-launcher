@@ -7,18 +7,7 @@ export async function get({ params }) {
 
   const { country, city } = params;
 
-  const weatherResponse = await fetch(
+  return await fetch(
     `${openWeatherStaticConfig.baseUri}/weather?q=${city},${country}&units=${openWeatherUnit}&appid=${openWeatherApiKey}`
   );
-
-  if (!weatherResponse.ok)
-    return new Response(
-      await weatherResponse.text(), {
-      status: 500
-    }
-    );
-  return new Response(
-    await weatherResponse.text(), {
-    status: 200
-  });
 }

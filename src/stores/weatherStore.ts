@@ -1,8 +1,8 @@
-import { atom, map, MapStore, WritableAtom } from "nanostores";
-import type { Weather } from "../models/Weather";
+import { atom, WritableAtom } from "nanostores";
+import type { WeatherResponse } from "../models/Weather";
 import { ExpirableCache } from "../utils/ExpirableCache";
 
-export const isShowingWeather = atom(false);
-export const weather: WritableAtom<Weather> = atom(
-  ExpirableCache.get('weather') ?? {}
+export const weather: WritableAtom<WeatherResponse> = atom(
+  ExpirableCache.get('weather')
 );
+export const isShowingWeather = atom(weather.get() ? true : false);

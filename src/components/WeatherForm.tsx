@@ -6,8 +6,12 @@ import { isShowingWeather } from "../stores/weatherStore";
 import { weather } from "../stores/weatherStore";
 
 export default function WeatherForm() {
-  const [country, setCountry] = useState<string>();
-  const [city, setCity] = useState<string>();
+  const weatherValue = weather.get();
+
+  const [country, setCountry] = useState<string>(
+    weatherValue?.sys?.country ?? ""
+  );
+  const [city, setCity] = useState<string>(weatherValue?.name ?? "");
 
   const countryInput = (e: React.FormEvent<HTMLInputElement>) =>
     setCountry(ExtractValueFromInputEvent(e));

@@ -9,11 +9,12 @@ export default function WeatherForm() {
   const [country, setCountry] = useState<string>();
   const [city, setCity] = useState<string>();
 
-  const countryInput = (e: InputEvent) =>
+  const countryInput = (e: React.FormEvent<HTMLInputElement>) =>
     setCountry(ExtractValueFromInputEvent(e));
-  const cityInput = (e: InputEvent) => setCity(ExtractValueFromInputEvent(e));
+  const cityInput = (e: React.FormEvent<HTMLInputElement>) =>
+    setCity(ExtractValueFromInputEvent(e));
 
-  const submit = async (e: SubmitEvent) => {
+  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await fetchWeather();
   };
@@ -34,7 +35,7 @@ export default function WeatherForm() {
   return (
     <form className="flex flex-wrap justify-end gap-2" onSubmit={submit}>
       <div>
-        <label for="country-input" className="sr-only"></label>
+        <label htmlFor="country-input" className="sr-only"></label>
         <input
           id="country-input"
           className="rounded-xl frosted-glass
@@ -47,7 +48,7 @@ export default function WeatherForm() {
         />
       </div>
       <div>
-        <label for="city-input" className="sr-only"></label>
+        <label htmlFor="city-input" className="sr-only"></label>
         <input
           id="city-input"
           className="rounded-xl frosted-glass

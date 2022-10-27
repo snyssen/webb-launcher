@@ -2,6 +2,7 @@ import { h } from "preact";
 import WeatherForm from "./WeatherForm";
 import { useStore } from "@nanostores/preact";
 import { isShowingWeather } from "../stores/weatherStore";
+import WeatherView from "./WeatherView";
 
 export default function WeatherComponent() {
   const $isShowingWeather = useStore(isShowingWeather);
@@ -12,7 +13,7 @@ export default function WeatherComponent() {
 
   return (
     <div className="flex flex-row gap-2 justify-start items-start">
-      {$isShowingWeather ? <p>WIP</p> : <WeatherForm />}
+      {$isShowingWeather ? <WeatherView /> : <WeatherForm />}
       <button
         id="weather-form-toggle"
         type="button"

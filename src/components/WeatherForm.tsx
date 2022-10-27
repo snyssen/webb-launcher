@@ -3,6 +3,7 @@ import { useEffect, useState } from "preact/hooks";
 import type { Weather } from "../models/Weather";
 import { ExtractValueFromInputEvent } from "../utils/FormsUtils";
 import { isShowingWeather } from "../stores/weatherStore";
+import { weather } from "../stores/weatherStore";
 
 export default function WeatherForm() {
   const [country, setCountry] = useState<string>();
@@ -26,8 +27,7 @@ export default function WeatherForm() {
       );
       return;
     }
-    const weather: Weather = await weatherResponse.json();
-
+    weather.set(await weatherResponse.json());
     isShowingWeather.set(!isShowingWeather.get());
   };
 

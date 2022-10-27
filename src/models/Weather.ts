@@ -13,7 +13,7 @@ export interface WeatherResponse {
   sys: WeatherSys;
   timezone: number;
   id: number;
-  name: string;
+  name: string; // City name
   cod: number;
 }
 
@@ -58,7 +58,7 @@ export interface Precipitations {
 export interface WeatherSys {
   type: number;
   id: number;
-  country: string;
+  country: string; // Coutry code
   sunrise: number; // UNIX timestamp
   sunset: number; // UNIX timestamp
 }

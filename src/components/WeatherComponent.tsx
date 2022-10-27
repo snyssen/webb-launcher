@@ -1,8 +1,9 @@
 import { h } from "preact";
 import WeatherForm from "./WeatherForm";
 import { useStore } from "@nanostores/preact";
-import { isShowingWeather } from "../stores/weatherStore";
+import { isShowingWeather, weather } from "../stores/weatherStore";
 import WeatherView from "./WeatherView";
+import { ExpirableCache } from "../utils/ExpirableCache";
 
 export default function WeatherComponent() {
   const $isShowingWeather = useStore(isShowingWeather);
@@ -10,6 +11,9 @@ export default function WeatherComponent() {
   const toggleWeather = () => {
     isShowingWeather.set(!$isShowingWeather);
   };
+
+  // Update cache on weather value change, expire entry after one hour
+  weather.listen((w) => ExpirableCache.store("weather", w, 60 * 60 * 1000));
 
   return (
     <div className="flex flex-row gap-2 justify-start items-start">

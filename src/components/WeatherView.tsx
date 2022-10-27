@@ -18,7 +18,12 @@ export default function WeatherView({ tempUnit = "°", speedUnit = "km/h" }) {
   const windArrowRotation = () => `rotate(${$weather.wind.deg}deg)`;
 
   return (
-    <div className="flex flex-row flex-wrap gap-2">
+    <div
+      className="flex flex-row flex-wrap
+      gap-x-2 md:gap-x-4 xl:gap-x-6
+      gap-y-2 xl:gap-y-4
+    "
+    >
       <i
         className={
           getIconClassFromOpenWeatherCode($weather.weather[0].icon) +
@@ -33,7 +38,15 @@ export default function WeatherView({ tempUnit = "°", speedUnit = "km/h" }) {
         (Feels like {$weather.main.feels_like}
         {tempUnit})
       </p>
-      <p className="text-xl">
+      <p className="hidden sm:block">
+        <i className="las la-temperature-high"></i>
+        {$weather.main.temp_max}
+        {tempUnit}
+        <i className="las la-temperature-low"></i>
+        {$weather.main.temp_min}
+        {tempUnit}
+      </p>
+      <p>
         <i
           className="las la-location-arrow"
           style={{
@@ -41,6 +54,16 @@ export default function WeatherView({ tempUnit = "°", speedUnit = "km/h" }) {
           }}
         ></i>
         {$weather.wind.speed} {speedUnit}
+      </p>
+      <p className="hidden md:inline-flex flex-wrap gap-x-1">
+        <span>
+          <i className="las la-sun"></i>
+          {new Date($weather.sys.sunrise * 1000).toLocaleTimeString()}
+        </span>
+        <span>
+          <i className="las la-moon"></i>
+          {new Date($weather.sys.sunset * 1000).toLocaleTimeString()}
+        </span>
       </p>
     </div>
   );

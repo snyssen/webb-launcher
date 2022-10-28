@@ -8,7 +8,7 @@ import { ExpirableCache } from "../utils/ExpirableCache";
 export default function WeatherComponent({
   enabled = false,
   tempUnit = "°",
-  speedUnit = "km/h",
+  speedUnit = "m/s",
 }) {
   if (!enabled)
     return <p>An Open Weather API key is required for the weather feature.</p>;

@@ -3,7 +3,7 @@ import { h } from "preact";
 import { weather } from "../stores/weatherStore";
 import { getIconClassFromOpenWeatherCode } from "../utils/OpenWeatherUtils";
 
-export default function WeatherView({ tempUnit = "°", speedUnit = "km/h" }) {
+export default function WeatherView({ tempUnit = "°", speedUnit = "m/s" }) {
   const $weather = useStore(weather);
   if (!$weather)
     return <p>No weather available, please go back and make a query.</p>;

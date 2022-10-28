@@ -11,6 +11,17 @@ Built with [Astro](https://astro.build), Webb Launcher is an homage to the [Jame
 
 > **NOTE:** The [GitHub repository](https://github.com/snyssen/webb-launcher) is a mirror of the [original repository](https://git.snyssen.be/snyssen/webb-launcher), where the actual development work is done. You may however file any issue you have with this project on the GitHub repository.
 
+## Table of content
+
+- [Webb Launcher](#webb-launcher)
+  - [Table of content](#table-of-content)
+  - [How to use](#how-to-use)
+  - [Lighthouse results](#lighthouse-results)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+  - [3rd party Licenses](#3rd-party-licenses)
+    - [Favicon](#favicon)
+
 ## How to use
 
 The recommended approach is with docker-compose and an accompanying .env file for your list of shortcuts:
@@ -94,3 +105,14 @@ The dashboard can also provide weather information based on the [OpenWeather API
 ### Mobile
 
 ![Mobile lighthouse score](lighthouse-mobile.png)
+
+## 3rd party Licenses
+
+### Favicon
+
+The favicon was generated using the following graphics from Twitter Twemoji:
+
+- Graphics Title: 1f6f0.svg
+- Graphics Author: Copyright 2020 Twitter, Inc and other contributors (<https://github.com/twitter/twemoji>)
+- Graphics Source: <https://github.com/twitter/twemoji/blob/master/assets/svg/1f6f0.svg>
+- Graphics License: CC-BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>)

@@ -15,9 +15,13 @@ export abstract class ExpirableCache {
   }
 
   public static get<T>(key: string): T | null {
-    const cacheEntry = JSON.parse(localStorage.getItem(key) ?? '{}') as ExpirableCacheEntry<T>;
+    const cacheEntry = this.getUnchecked<T>(key);
     if (!cacheEntry || cacheEntry.expirationDate < Date.now())
       return null;
     return cacheEntry.value;
+  }
+
+  public static getUnchecked<T>(key: string): ExpirableCacheEntry<T> | null {
+    return JSON.parse(localStorage.getItem(key) ?? '{}') as ExpirableCacheEntry<T>;
   }
 }

@@ -1,17 +1,23 @@
 import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import type { Weather } from "../models/Weather";
+import { useState } from "preact/hooks";
 import { ExtractValueFromInputEvent } from "../utils/FormsUtils";
 import { isShowingWeather } from "../stores/weatherStore";
 import { weather } from "../stores/weatherStore";
+import { ExpirableCache } from "../utils/ExpirableCache";
+import type { WeatherResponse } from "../models/Weather";
 
 export default function WeatherForm() {
-  const weatherValue = weather.get();
+  const weatherCachedValue =
+    ExpirableCache.getUnchecked<WeatherResponse>("weather");
+  const shouldAutoRefresh =
+    weatherCachedValue && weatherCachedValue.expirationDate < Date.now();
 
   const [country, setCountry] = useState<string>(
-    weatherValue?.sys?.country ?? ""
+    weatherCachedValue?.value?.sys?.country ?? ""
   );
-  const [city, setCity] = useState<string>(weatherValue?.name ?? "");
+  const [city, setCity] = useState<string>(
+    weatherCachedValue?.value?.name ?? ""
+  );
 
   const countryInput = (e: React.FormEvent<HTMLInputElement>) =>
     setCountry(ExtractValueFromInputEvent(e));
@@ -35,6 +41,8 @@ export default function WeatherForm() {
     weather.set(await weatherResponse.json());
     isShowingWeather.set(!isShowingWeather.get());
   };
+
+  if (shouldAutoRefresh) fetchWeather();
 
   return (
     <form className="flex flex-wrap justify-end gap-2" onSubmit={submit}>

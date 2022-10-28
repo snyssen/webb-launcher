@@ -24,7 +24,7 @@ export abstract class OpenWeatherConfig {
   static getDisplayableSpeedUnit = () => {
     switch (OpenWeatherConfig.units) {
       case 'metric':
-        return 'km/h';
+        return 'm/s';
       case 'imperial':
         return 'mph';
       case 'standard':

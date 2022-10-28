@@ -62,9 +62,11 @@ SHORTCUTS="
     - name: Matrix
       url: https://matrix.org
 "
+# Optionally, you can add a OpenWeather API key so the dashboard can query weather information
+# OPENWEATHER_API_KEY="xxxx"
 ```
 
-As you can see, the launcher expects a list of shortcuts in the form of a yaml tree. The tree has a minimum depth of 2 and a maximum depth of 3. Nodes are composed of the following fields:
+The launcher expects a list of shortcuts in the form of a yaml tree. The tree has a minimum depth of 2 and a maximum depth of 3. Nodes are composed of the following fields:
 
 | Field name     | Field value                                                                                                     | Required                                          |
 | -------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
@@ -80,6 +82,8 @@ Each depth corresponds to a different element in the dashboard:
 | 1     | card              | **name** (title), icon_classes (icon before text), children (body of card)                                                                                                           |
 | 2     | body of card      | **name** (text of the link or accordion), icon_classes (icon before text if link, or after text if accordion), children (body of accordion; *if unset, current node will be a link*) |
 | 3     | body of accordion | **name** (text of the link), icon_classes (icon before text)                                                                                                                         |
+
+The dashboard can also provide weather information based on the [OpenWeather API](https://openweathermap.org). To make use of this feature, please [Create an open weather account](https://home.openweathermap.org/users/sign_up) and [request an API key](https://home.openweathermap.org/api_keys). Then, inject the API key into the container using the environment variable `OPENWEATHER_API_KEY`.
 
 ## Lighthouse results
 

@@ -31,19 +31,19 @@ export default function WeatherView({ tempUnit = "°", speedUnit = "km/h" }) {
         }
       ></i>
       <p className="text-xl">
-        {$weather.main.temp}
+        {$weather.main.temp.toFixed(1)}
         {tempUnit}
       </p>
       <p className="text-xs">
-        (Feels like {$weather.main.feels_like}
+        (Feels like {$weather.main.feels_like.toFixed(1)}
         {tempUnit})
       </p>
       <p className="hidden sm:block">
         <i className="las la-temperature-high"></i>
-        {$weather.main.temp_max}
+        {$weather.main.temp_max.toFixed(1)}
         {tempUnit}
         <i className="las la-temperature-low"></i>
-        {$weather.main.temp_min}
+        {$weather.main.temp_min.toFixed(1)}
         {tempUnit}
       </p>
       <p>
@@ -53,7 +53,7 @@ export default function WeatherView({ tempUnit = "°", speedUnit = "km/h" }) {
             transform: windArrowRotation(),
           }}
         ></i>
-        {$weather.wind.speed} {speedUnit}
+        {$weather.wind.speed.toFixed(2)} {speedUnit}
       </p>
       <p className="hidden md:inline-flex flex-wrap gap-x-1">
         <span>

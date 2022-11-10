@@ -29,6 +29,19 @@ steps:
         from_secret: github_package_token
       repo: "ghcr.io/${DRONE_REPO}"
       tags: *docker_tags
+  - name: notify by e-mail
+    image: drillster/drone-email
+    settings:
+      host:
+        from_secret: smtp_server
+      username:
+        from_secret: smtp_user
+      password:
+        from_secret: smtp_pass
+      from: admin@snyssen.be
+    depends_on:
+      - "build and publish container image on Gitea"
+      - "build and publish container image on Github"
 ---
 kind: pipeline
 name: branches_docker
@@ -57,3 +70,16 @@ steps:
         from_secret: github_package_token
       repo: "ghcr.io/${DRONE_REPO}"
       tags: *docker_tags
+  - name: notify by e-mail
+    image: drillster/drone-email
+    settings:
+      host:
+        from_secret: smtp_server
+      username:
+        from_secret: smtp_user
+      password:
+        from_secret: smtp_pass
+      from: admin@snyssen.be
+    depends_on:
+      - "build and publish container image on Gitea"
+      - "build and publish container image on Github"

@@ -6,20 +6,28 @@ trigger:
   event:
     - tag
 steps:
-  - name: build and publish container image
+  - name: build and publish container image on Gitea
     image: plugins/docker
-    settings:
+    settings: &docker_settings
       registry: git.snyssen.be
       username: ${DRONE_COMMIT_AUTHOR}
       password:
         from_secret: gitea_access_token
       repo: "git.snyssen.be/${DRONE_REPO}"
       build_args: LAUNCHER_VERSION=${DRONE_SEMVER}
-      tags:
+      tags: &docker_tags
         - ${DRONE_SEMVER_MAJOR}
         - ${DRONE_SEMVER_MAJOR}.${DRONE_SEMVER_MINOR}
         - ${DRONE_SEMVER}
         - latest
+  - name: build and publish container image on Github
+    image: plugins/docker
+    settings:
+      <<: *docker_settings
+      registry: ghcr.io
+      password:
+        from_secret: github_package_token
+      tags: *docker_tags
 ---
 kind: pipeline
 name: branches_docker
@@ -28,14 +36,22 @@ trigger:
   event:
     - push
 steps:
-  - name: build and publish container image
+  - name: build and publish container image on Gitea
     image: plugins/docker
-    settings:
+    settings: &docker_settings
       registry: git.snyssen.be
       username: ${DRONE_COMMIT_AUTHOR}
       password:
         from_secret: gitea_access_token
       repo: "git.snyssen.be/${DRONE_REPO}"
       build_args: LAUNCHER_VERSION=built from branch ${DRONE_BRANCH}
-      tags:
+      tags: &docker_tags
         - ${DRONE_BRANCH}
+  - name: build and publish container image on Github
+    image: plugins/docker
+    settings:
+      <<: *docker_settings
+      registry: ghcr.io
+      password:
+        from_secret: github_package_token
+      tags: *docker_tags

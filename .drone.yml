@@ -27,7 +27,7 @@ steps:
       registry: ghcr.io
       password:
         from_secret: github_package_token
-      repo: "github.com/${DRONE_REPO}"
+      repo: "ghcr.io/${DRONE_REPO}"
       tags: *docker_tags
 ---
 kind: pipeline
@@ -55,5 +55,5 @@ steps:
       registry: ghcr.io
       password:
         from_secret: github_package_token
-      repo: "github.com/${DRONE_REPO}"
+      repo: "ghcr.io/${DRONE_REPO}"
       tags: *docker_tags

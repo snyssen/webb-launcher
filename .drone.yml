@@ -42,6 +42,10 @@ steps:
     depends_on:
       - "build and publish container image on Gitea"
       - "build and publish container image on Github"
+    when:
+      status:
+      - success
+      - failure
 ---
 kind: pipeline
 name: branches_docker
@@ -83,3 +87,7 @@ steps:
     depends_on:
       - "build and publish container image on Gitea"
       - "build and publish container image on Github"
+    when:
+      status:
+      - success
+      - failure

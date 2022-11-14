@@ -2,6 +2,8 @@
 
 [![Build Status](https://drone.snyssen.be/api/badges/snyssen/webb-launcher/status.svg?ref=refs/heads/main)](https://drone.snyssen.be/snyssen/webb-launcher) [![Latest Docker image](https://img.shields.io/badge/Docker%20image-latest-blue)](https://git.snyssen.be/snyssen/-/packages/container/webb-launcher/latest) ![GitHub](https://img.shields.io/github/license/snyssen/webb-launcher)
 
+**[See the demo](https://webb-launcher-prod-webb-launcher-416rw1.mo4.mogenius.io)** (due to restrictions on the hosting platform, only a very limited list of links is shown)
+
 | ![Mockup of white theme](white-theme-mockup.png) | ![Mockup of dark theme](dark-theme-mockup.png) |
 | ------------------------------------------------ | ---------------------------------------------- |
 
@@ -32,11 +34,11 @@ The recommended approach is with docker-compose and an accompanying .env file fo
 version: "3.3"
 services:
   dashboard:
-    image: git.snyssen.be/snyssen/webb-launcher:1
+    image: ghcr.io/snyssen/webb-launcher
     env_file:
       - ./.env
     ports:
-      - 80:80
+      - 80:8080
 ```
 
 > `.env` file

@@ -2,8 +2,8 @@
 const current = new Date();
 ---
 <div class="flex-auto flex flex-col">
-  <span id="clock-time" class="block">{current.toLocaleTimeString()}</span>
-  <span id="clock-date" class="block">{current.toLocaleDateString()}</span>
+  <span id="clock-time" class="block whitespace-nowrap">{current.toLocaleTimeString()}</span>
+  <span id="clock-date" class="block whitespace-nowrap">{current.toLocaleDateString()}</span>
 </div>
 
 <script is:inline>

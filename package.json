@@ -20,7 +20,7 @@
   "devDependencies": {
     "@astrojs/node": "^6.0.0",
     "@astrojs/preact": "^3.0.0",
-    "@astrojs/tailwind": "^2.0.1",
+    "@astrojs/tailwind": "^5.0.0",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^18.11.2",
     "@types/react": "^18.0.21",

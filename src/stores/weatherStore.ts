@@ -1,4 +1,4 @@
-import { atom, WritableAtom } from "nanostores";
+import { atom, type WritableAtom } from "nanostores";
 import type { WeatherResponse } from "../models/Weather";
 import { ExpirableCache } from "../utils/ExpirableCache";
 

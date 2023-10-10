@@ -1,8 +1,8 @@
 # Webb Launcher
 
-[![Build Status](https://drone.snyssen.be/api/badges/snyssen/webb-launcher/status.svg?ref=refs/heads/main)](https://drone.snyssen.be/snyssen/webb-launcher) [![Latest Docker image](https://img.shields.io/badge/Docker%20image-latest-blue)](https://git.snyssen.be/snyssen/-/packages/container/webb-launcher/latest) ![GitHub](https://img.shields.io/github/license/snyssen/webb-launcher)
-
-**[See the demo](https://webb-launcher-prod-webb-launcher-416rw1.mo4.mogenius.io)** (due to restrictions on the hosting platform, only a very limited list of links is shown)
+[![Build Status](https://github.com/snyssen/webb-launcher/actions/workflows/docker-publish.yml/badge.svg
+)](https://github.com/snyssen/webb-launcher/actions/workflows/docker-publish.yml) [![Latest release](https://img.shields.io/github/v/release/snyssen/webb-launcher)](https://github.com/snyssen/webb-launcher/releases/latest)
+[![License](https://img.shields.io/github/license/snyssen/webb-launcher)](https://github.com/snyssen/webb-launcher/blob/main/LICENSE.md)
 
 | ![Mockup of white theme](white-theme-mockup.png) | ![Mockup of dark theme](dark-theme-mockup.png) |
 | ------------------------------------------------ | ---------------------------------------------- |
@@ -10,8 +10,6 @@
 Webb Launcher is a minimalist starting page/personal dashboard mainly aimed at self-hosters. With its [(almost) perfect lighthouse score](#lighthouse-results) and its mobile-first responsive design, it will load fast and look great on any of your devices.
 
 Built with [Astro](https://astro.build), Webb Launcher is an homage to the [James Webb space telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope) and its [Ariane 5](https://en.wikipedia.org/wiki/Ariane_5) launcher.
-
-> **NOTE:** The [GitHub repository](https://github.com/snyssen/webb-launcher) is a mirror of the [original repository](https://git.snyssen.be/snyssen/webb-launcher), where the actual development work is done. You may however file any issue you have with this project on the GitHub repository.
 
 ## Table of content
 

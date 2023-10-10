@@ -15,7 +15,7 @@
     "astro": "^1.2.8",
     "express": "^4.18.2",
     "js-yaml": "^4.1.0",
-    "nanostores": "^0.7.0"
+    "nanostores": "^0.9.0"
   },
   "devDependencies": {
     "@astrojs/node": "^1.1.0",

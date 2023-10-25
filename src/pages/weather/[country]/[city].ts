@@ -1,6 +1,6 @@
 import { OpenWeatherConfig } from "../../../configuration/OpenWeatherConfig";
 
-export async function get({ params }: any) {
+export async function GET({ params }: any) {
   const { country, city } = params;
 
   if (!OpenWeatherConfig.isApiKeyDefined())

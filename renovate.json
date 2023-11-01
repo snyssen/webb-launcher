@@ -1,6 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended",
+    ":pinAllExceptPeerDependencies",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "astro",
+        "^@astrojs"
+      ],
+      "groupName": [
+        "astrojs packages"
+      ]
+    }
   ]
 }

@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.5](https://github.com/snyssen/webb-launcher/compare/v2.2.4...v2.2.5) (2023-11-01)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([#50](https://github.com/snyssen/webb-launcher/issues/50)) ([0000e57](https://github.com/snyssen/webb-launcher/commit/0000e575761b3da565381b3eb4a795593a4a87eb))
+* **deps:** update dependency astro to v3.4.2 ([#54](https://github.com/snyssen/webb-launcher/issues/54)) ([545abb4](https://github.com/snyssen/webb-launcher/commit/545abb450e9e4688c2364074c9f36a798cc9b1f4))
+
 ## [2.2.4](https://github.com/snyssen/webb-launcher/compare/v2.2.3...v2.2.4) (2023-10-25)
 
 

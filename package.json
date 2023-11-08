@@ -21,7 +21,7 @@
     "@astrojs/node": "6.0.3",
     "@astrojs/preact": "3.0.1",
     "@astrojs/tailwind": "5.0.2",
-    "@types/js-yaml": "4.0.8",
+    "@types/js-yaml": "4.0.9",
     "@types/node": "20.8.10",
     "@types/react": "18.2.33",
     "preact": "10.18.2",

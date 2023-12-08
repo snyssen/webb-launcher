@@ -15,5 +15,4 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         with:
           release-type: node
-          package-name: personal-website
           token: ${{ secrets.RELEASE_PLEASE_PAT }}

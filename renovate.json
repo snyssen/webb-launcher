@@ -14,6 +14,14 @@
       "groupName": [
         "astrojs packages"
       ]
+    },
+    {
+      "matchPackagePatterns": [
+        "^@types"
+      ],
+      "groupName": [
+        "types packages"
+      ]
     }
   ]
 }

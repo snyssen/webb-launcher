@@ -7,7 +7,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const version = import.meta.env.LAUNCHER_VERSION ?? process.env.LAUNCHER_VERSION;
+const version = import.meta.env.APP_VERSION ?? process.env.APP_VERSION;
 ---
 
 <Layout title={title}>

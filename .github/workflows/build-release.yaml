@@ -11,9 +11,14 @@ permissions:
   pull-requests: write
   packages: write
 env:
+  # login to github registry using the default credentials associated with pipeline
   REGISTRY: ghcr.io
+  REGISTRY_USERNAME: ${{ github.actor }}
+  REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
+  # For release-please, see available types at https://github.com/google-github-actions/release-please-action/tree/v4/?tab=readme-ov-file#release-types-supported
+  PROJECT_TYPE: node
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -22,13 +27,13 @@ jobs:
       - id: rp
         uses: google-github-actions/release-please-action@v4
         with:
-          release-type: node
+          release-type: ${{ env.PROJECT_TYPE }}
       - name: Log into registry ${{ env.REGISTRY }}
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ env.REGISTRY_USERNAME }}
+          password: ${{ env.REGISTRY_PASSWORD }}
       - name: Prepare tags for Docker meta
         id: tags
         env:

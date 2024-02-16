@@ -15,7 +15,7 @@ env:
   REGISTRY: ghcr.io
   REGISTRY_USERNAME: ${{ github.actor }}
   REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-  # github.repository as <account>/<repo>
+  # Image name will be <account>/<repo>, but you could put anything here
   IMAGE_NAME: ${{ github.repository }}
   # For release-please, see available types at https://github.com/google-github-actions/release-please-action/tree/v4/?tab=readme-ov-file#release-types-supported
   PROJECT_TYPE: node
@@ -25,6 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: rp
+        if: github.event_name != 'pull_request' && github.ref_name == 'main'
         uses: google-github-actions/release-please-action@v4
         with:
           release-type: ${{ env.PROJECT_TYPE }}
@@ -37,6 +38,7 @@ jobs:
       - name: Prepare tags for Docker meta
         id: tags
         env:
+          # When release please is skipped, these values will be empty
           is_release: ${{ steps.rp.outputs.release_created }}
           version: v${{ steps.rp.outputs.major }}.${{ steps.rp.outputs.minor }}.${{ steps.rp.outputs.patch }}
         run: |
@@ -60,6 +62,12 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: ${{ steps.tags.outputs.tags }}
+      # (optional) necessary for multi-platform images
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      # (optional) necessary for multi-platform images
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
@@ -67,4 +75,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          # Make sure your image can be built for these platforms!
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          # (optional) Add build arguments. I like to have the version available to the build so the app can show it.
           build-args: APP_VERSION=${{ steps.meta.outputs.version }}

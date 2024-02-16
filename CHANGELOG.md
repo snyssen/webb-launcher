@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/snyssen/webb-launcher/compare/v2.2.6...v2.3.0) (2024-02-16)
+
+
+### Features
+
+* **build:** add multi-platform builds ([cc065a8](https://github.com/snyssen/webb-launcher/commit/cc065a8bb0f6acd4bef22b120ca7943f55d0bb07))
+
 ## [2.2.6](https://github.com/snyssen/webb-launcher/compare/v2.2.5...v2.2.6) (2024-02-15)
 
 

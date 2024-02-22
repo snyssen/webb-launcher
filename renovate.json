@@ -17,6 +17,14 @@
     },
     {
       "matchPackagePatterns": [
+        "^@?nanostores"
+      ],
+      "groupName": [
+        "Nanostores packages"
+      ]
+    },
+    {
+      "matchPackagePatterns": [
         "^@types"
       ],
       "groupName": [

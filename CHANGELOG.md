@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.3.1](https://github.com/snyssen/webb-launcher/compare/v2.3.0...v2.3.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v4.4.1 ([#139](https://github.com/snyssen/webb-launcher/issues/139)) ([e8d5f25](https://github.com/snyssen/webb-launcher/commit/e8d5f25e6f9f4657b4cb77481954851b4baeb9fb))
+* **deps:** update dependency astro to v4.4.3 ([#143](https://github.com/snyssen/webb-launcher/issues/143)) ([887a0e4](https://github.com/snyssen/webb-launcher/commit/887a0e47b3f83f2130d97e9bd3af005332e68451))
+* **deps:** update dependency astro to v4.4.9 ([#153](https://github.com/snyssen/webb-launcher/issues/153)) ([64f6f7b](https://github.com/snyssen/webb-launcher/commit/64f6f7b0b89e60bf164b4495f12038a0e225911a))
+* **deps:** update dependency astro to v4.5.1 ([#154](https://github.com/snyssen/webb-launcher/issues/154)) ([527ca03](https://github.com/snyssen/webb-launcher/commit/527ca030aab5d150b93f6e3637bd2c4716468a5c))
+* **deps:** update dependency express to v4.18.3 ([#152](https://github.com/snyssen/webb-launcher/issues/152)) ([a192171](https://github.com/snyssen/webb-launcher/commit/a1921718dfe8c0017f79213ddce602a074d8b673))
+* **deps:** update dependency express to v4.19.1 ([#160](https://github.com/snyssen/webb-launcher/issues/160)) ([39d90da](https://github.com/snyssen/webb-launcher/commit/39d90da2801ed809670db5113b0c376d27fcc6f9))
+* **deps:** update nanostores packages ([#147](https://github.com/snyssen/webb-launcher/issues/147)) ([1f7aa7e](https://github.com/snyssen/webb-launcher/commit/1f7aa7ebdd330dc17ce1e16a31ac6b58f4c87f1c))
+
 ## [2.3.0](https://github.com/snyssen/webb-launcher/compare/v2.2.6...v2.3.0) (2024-02-16)
 
 

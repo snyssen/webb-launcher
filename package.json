@@ -13,7 +13,7 @@
   "dependencies": {
     "@nanostores/preact": "0.5.1",
     "astro": "4.5.9",
-    "express": "4.19.1",
+    "express": "4.19.2",
     "js-yaml": "4.1.0",
     "nanostores": "0.10.0"
   },

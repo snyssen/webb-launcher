@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.3](https://github.com/snyssen/webb-launcher/compare/v2.3.2...v2.3.3) (2024-03-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express to v4.19.2 [security] ([#169](https://github.com/snyssen/webb-launcher/issues/169)) ([5de825d](https://github.com/snyssen/webb-launcher/commit/5de825d8b0e21566f83b516b4901e2171461c73c))
+
 ## [2.3.2](https://github.com/snyssen/webb-launcher/compare/v2.3.1...v2.3.2) (2024-03-28)
 
 

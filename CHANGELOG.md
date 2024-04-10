@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.4](https://github.com/snyssen/webb-launcher/compare/v2.3.3...v2.3.4) (2024-04-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nanostores to v0.10.3 ([#174](https://github.com/snyssen/webb-launcher/issues/174)) ([028995c](https://github.com/snyssen/webb-launcher/commit/028995c8456165084f9872ff15bad9bd50b0a60e))
+
 ## [2.3.3](https://github.com/snyssen/webb-launcher/compare/v2.3.2...v2.3.3) (2024-03-28)
 
 

@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.5](https://github.com/snyssen/webb-launcher/compare/v2.3.4...v2.3.5) (2024-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v4.11.0 ([#199](https://github.com/snyssen/webb-launcher/issues/199)) ([257d5df](https://github.com/snyssen/webb-launcher/commit/257d5dfe69871bfd217d56eb6520805a17126e3b))
+* **deps:** update dependency astro to v4.6.2 ([#182](https://github.com/snyssen/webb-launcher/issues/182)) ([1199d41](https://github.com/snyssen/webb-launcher/commit/1199d41102bb63e6e065f8dec6eff3638ad565e6))
+* **deps:** update dependency astro to v4.6.3 ([#185](https://github.com/snyssen/webb-launcher/issues/185)) ([f6fc9b4](https://github.com/snyssen/webb-launcher/commit/f6fc9b4ad1cd88095b79e8bd9d5348f6ab37b5fc))
+* **deps:** update dependency astro to v4.7.1 ([#186](https://github.com/snyssen/webb-launcher/issues/186)) ([56ae723](https://github.com/snyssen/webb-launcher/commit/56ae7231441320464cb994c5a69efc6fa4b3241e))
+* **deps:** update dependency astro to v4.9.1 ([#192](https://github.com/snyssen/webb-launcher/issues/192)) ([59beb71](https://github.com/snyssen/webb-launcher/commit/59beb7130e472835436b60d295c6ed2988836d5d))
+
 ## [2.3.4](https://github.com/snyssen/webb-launcher/compare/v2.3.3...v2.3.4) (2024-04-10)
 
 

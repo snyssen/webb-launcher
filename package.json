@@ -11,11 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@nanostores/preact": "0.5.1",
+    "@nanostores/preact": "0.5.2",
     "astro": "4.13.1",
     "express": "4.19.2",
     "js-yaml": "4.1.0",
-    "nanostores": "0.10.3"
+    "nanostores": "0.11.2"
   },
   "devDependencies": {
     "@astrojs/node": "8.3.2",

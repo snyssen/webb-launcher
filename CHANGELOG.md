@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.4.0](https://github.com/snyssen/webb-launcher/compare/v2.3.5...v2.4.0) (2024-09-01)
+
+
+### Features
+
+* make text in search bar bigger ([439c987](https://github.com/snyssen/webb-launcher/commit/439c9878d4284ef2fc3103faebcc9b17358b8ac6))
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v4.14.5 ([#210](https://github.com/snyssen/webb-launcher/issues/210)) ([8eca369](https://github.com/snyssen/webb-launcher/commit/8eca369a7eb7243bd1761fc7fcb470a62a034e3f))
+* **deps:** update dependency nanostores to v0.11.3 ([#212](https://github.com/snyssen/webb-launcher/issues/212)) ([5e981e2](https://github.com/snyssen/webb-launcher/commit/5e981e2f8452b9141dcf65224cd63b4b81d02abc))
+* **deps:** update nanostores packages ([#205](https://github.com/snyssen/webb-launcher/issues/205)) ([1625fee](https://github.com/snyssen/webb-launcher/commit/1625fee0f3dff7714d6749a247e7fa793c7308bf))
+
 ## [2.3.5](https://github.com/snyssen/webb-launcher/compare/v2.3.4...v2.3.5) (2024-07-06)
 
 

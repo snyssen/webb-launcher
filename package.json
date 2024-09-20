@@ -12,15 +12,15 @@
   },
   "dependencies": {
     "@nanostores/preact": "0.5.2",
-    "astro": "4.15.5",
+    "astro": "4.15.8",
     "express": "4.21.0",
     "js-yaml": "4.1.0",
     "nanostores": "0.11.3"
   },
   "devDependencies": {
-    "@astrojs/node": "8.3.3",
+    "@astrojs/node": "8.3.4",
     "@astrojs/preact": "3.5.3",
-    "@astrojs/tailwind": "5.1.0",
+    "@astrojs/tailwind": "5.1.1",
     "@types/js-yaml": "4.0.9",
     "@types/node": "20.16.5",
     "@types/react": "18.3.8",

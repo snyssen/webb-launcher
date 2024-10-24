@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/snyssen/webb-launcher/compare/v2.5.0...v2.5.0) (2024-10-24)
+
+
+### Miscellaneous Chores
+
+* rebuild release ([79bc6c5](https://github.com/snyssen/webb-launcher/commit/79bc6c5b3a6c0e5d196f29378d8fb721727a5c00))
+
 ## [2.5.0](https://github.com/snyssen/webb-launcher/compare/v2.4.3...v2.5.0) (2024-10-24)
 
 

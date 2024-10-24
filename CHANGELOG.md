@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.5.1](https://github.com/snyssen/webb-launcher/compare/v2.5.0...v2.5.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* rebuild release ([5a27512](https://github.com/snyssen/webb-launcher/commit/5a275128f069c38d61f401a31655cc12a96568ce))
+
+
+### Miscellaneous Chores
+
+* rebuild release ([bc0b75c](https://github.com/snyssen/webb-launcher/commit/bc0b75c3840acc8cb2bfcec86831b21137eb8af2))
+* rebuild release ([79bc6c5](https://github.com/snyssen/webb-launcher/commit/79bc6c5b3a6c0e5d196f29378d8fb721727a5c00))
+
 ## [2.5.0](https://github.com/snyssen/webb-launcher/compare/v2.5.0...v2.5.0) (2024-10-24)
 
 

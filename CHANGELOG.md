@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.5.0](https://github.com/snyssen/webb-launcher/compare/v2.4.3...v2.5.0) (2024-10-24)
+
+
+### Features
+
+* [TEST] force HTTP caching on all static elements ([837da9b](https://github.com/snyssen/webb-launcher/commit/837da9bcf74271578931fecf7625952f160268c5))
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v4.16.6 ([#242](https://github.com/snyssen/webb-launcher/issues/242)) ([62a1699](https://github.com/snyssen/webb-launcher/commit/62a1699e992392a08612ad8c9e9c6868466f78f9))
+* **deps:** update dependency astro to v4.16.7 ([#245](https://github.com/snyssen/webb-launcher/issues/245)) ([d3e0773](https://github.com/snyssen/webb-launcher/commit/d3e07738bcea155b501a2ffade6b176599ecc57c))
+* update client directive so it include framework name ([64f1383](https://github.com/snyssen/webb-launcher/commit/64f13831189c43f930c7a1ba428c8a2e37d0ba69))
+
 ## [2.4.3](https://github.com/snyssen/webb-launcher/compare/v2.4.2...v2.4.3) (2024-10-14)
 
 

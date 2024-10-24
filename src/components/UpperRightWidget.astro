@@ -11,5 +11,5 @@ const isWeatherEnabled = OpenWeatherConfig.isApiKeyDefined();
   frosted-glass-panel p-4 md:p-5
   md:max-w-sm lg:max-w-md
 ">
-  <WeatherComponent client:only tempUnit={tempUnit} speedUnit={speedUnit} enabled={isWeatherEnabled}/>
+  <WeatherComponent client:only="preact" tempUnit={tempUnit} speedUnit={speedUnit} enabled={isWeatherEnabled}/>
 </div>

@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.6.0](https://github.com/snyssen/webb-launcher/compare/v2.5.1...v2.6.0) (2024-12-02)
+
+
+### Features
+
+* add ability to change search engine ([170bfee](https://github.com/snyssen/webb-launcher/commit/170bfeed9a83aaea030006c35ee02bf2cfb39264))
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v4.16.10 ([#254](https://github.com/snyssen/webb-launcher/issues/254)) ([cb6a943](https://github.com/snyssen/webb-launcher/commit/cb6a943788fc295f65b6c7992daa5b4dcab35f6e))
+* **deps:** update dependency astro to v4.16.8 ([#251](https://github.com/snyssen/webb-launcher/issues/251)) ([fa74996](https://github.com/snyssen/webb-launcher/commit/fa7499679150af7e7d5ab6f9080482d26bcd8f27))
+
 ## [2.5.1](https://github.com/snyssen/webb-launcher/compare/v2.5.0...v2.5.1) (2024-10-24)
 
 

@@ -1,5 +1,9 @@
 ---
+export interface Props {
+  searchUrlBase: string;
+}
 
+const { searchUrlBase } = Astro.props;
 ---
 <div>
   <label for="search-input" class="sr-only">Search</label>
@@ -21,14 +25,14 @@
   </div>
 </div>
 
-<script is:inline>
+<script is:inline define:vars={{ searchUrlBase }}>
   const searchInput = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button')
 
   function search() {
     const searchTerms = searchInput.value;
     if (searchTerms) {
-      window.location.href = 'https://duckduckgo.com/?q=' + encodeURIComponent(searchTerms);
+      window.location.href = `${searchUrlBase}${encodeURIComponent(searchTerms)}`;
     }
   }
 

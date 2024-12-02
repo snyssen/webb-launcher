@@ -33,6 +33,7 @@ try {
   return logAndReturnError('Failed to load yaml shortcuts.', 'Failed to load yaml shortcuts.', error);
 }
 
+const searchUrlBase = import.meta.env.SEARCH_URL_BASE ?? process.env.SEARCH_URL_BASE ?? 'https://duckduckgo.com/?q=';
 ---
 
 <GradientBackgroundLayout title="Webb launcher 🛰️ Your personal launch platform to the web!">
@@ -44,7 +45,7 @@ try {
         <div class="flex-auto"></div>
         <UpperRightWidget></UpperRightWidget>
       </div>
-      <SearchBar></SearchBar>
+      <SearchBar searchUrlBase={ searchUrlBase }></SearchBar>
     </div>
     <ShortcutsGrid shortcuts={shortcuts as Shortcut[]}></ShortcutsGrid>
   </div>

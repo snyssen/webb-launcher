@@ -1,7 +1,6 @@
 # Webb Launcher
 
-[![Build Status](https://github.com/snyssen/webb-launcher/actions/workflows/docker-publish.yml/badge.svg
-)](https://github.com/snyssen/webb-launcher/actions/workflows/docker-publish.yml) [![Latest release](https://img.shields.io/github/v/release/snyssen/webb-launcher)](https://github.com/snyssen/webb-launcher/releases/latest)
+[![Build & Release](https://github.com/snyssen/webb-launcher/actions/workflows/build-release.yaml/badge.svg)](https://github.com/snyssen/webb-launcher/actions/workflows/build-release.yaml) [![Latest release](https://img.shields.io/github/v/release/snyssen/webb-launcher)](https://github.com/snyssen/webb-launcher/releases/latest)
 [![License](https://img.shields.io/github/license/snyssen/webb-launcher)](https://github.com/snyssen/webb-launcher/blob/main/LICENSE.md)
 
 | ![Mockup of white theme](white-theme-mockup.png) | ![Mockup of dark theme](dark-theme-mockup.png) |
@@ -75,6 +74,10 @@ SHORTCUTS="
 "
 # Optionally, you can add a OpenWeather API key so the dashboard can query weather information
 # OPENWEATHER_API_KEY="xxxx"
+
+# Optionally, you can change the search engine used by providing a base URL. The search terms are simply appended to the provided URL, so it needs to include all of the query parameters you need, e.g. for Google:
+SEARCH_URL_BASE="https://www.google.be/search?q="
+# The default search engine, used if this value is left unset, is DuckDuckGo
 ```
 
 The launcher expects a list of shortcuts in the form of a yaml tree. The tree has a minimum depth of 2 and a maximum depth of 3. Nodes are composed of the following fields:

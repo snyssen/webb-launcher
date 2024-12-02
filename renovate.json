@@ -4,25 +4,7 @@
     "config:recommended",
     "group:allNonMajor",
     ":pinAllExceptPeerDependencies",
-    ":semanticCommits"
-  ],
-  "packageRules": [
-    {
-      "matchPackagePatterns": [
-        "astro",
-        "^@astrojs"
-      ],
-      "groupName": [
-        "astrojs packages"
-      ]
-    },
-    {
-      "matchPackagePatterns": [
-        "^@?nanostores"
-      ],
-      "groupName": [
-        "Nanostores packages"
-      ]
-    }
+    ":semanticCommits",
+    ":automergeMinor"
   ]
 }

@@ -5,6 +5,7 @@
     "group:allNonMajor",
     ":pinAllExceptPeerDependencies",
     ":semanticCommits",
-    ":automergeMinor"
+    ":automergeMinor",
+    ":automergeBranch"
   ]
 }

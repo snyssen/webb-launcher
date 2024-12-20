@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.2](https://github.com/snyssen/webb-launcher/compare/v2.6.1...v2.6.2) (2024-12-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro to v5.0.8 [security] ([#270](https://github.com/snyssen/webb-launcher/issues/270)) ([a58c1a8](https://github.com/snyssen/webb-launcher/commit/a58c1a8bd97f8784939905a193bc0da3da67ef59))
+
 ## [2.6.1](https://github.com/snyssen/webb-launcher/compare/v2.6.0...v2.6.1) (2024-12-18)
 
 

@@ -22,7 +22,7 @@
     "@astrojs/preact": "4.0.5",
     "@astrojs/tailwind": "5.1.5",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "22.13.9",
+    "@types/node": "22.13.10",
     "@types/react": "19.0.10",
     "preact": "10.26.4",
     "tailwindcss": "3.4.17"

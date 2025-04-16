@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.5](https://github.com/snyssen/webb-launcher/compare/v2.6.4...v2.6.5) (2025-04-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nanostores to v1 ([#309](https://github.com/snyssen/webb-launcher/issues/309)) ([d86ba11](https://github.com/snyssen/webb-launcher/commit/d86ba112f379d5ba710d4adfd7709f2942379a22))
+
 ## [2.6.4](https://github.com/snyssen/webb-launcher/compare/v2.6.3...v2.6.4) (2025-04-13)
 
 

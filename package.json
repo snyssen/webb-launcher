@@ -18,7 +18,7 @@
     "nanostores": "1.0.1"
   },
   "devDependencies": {
-    "@astrojs/node": "9.4.0",
+    "@astrojs/node": "9.4.1",
     "@astrojs/preact": "4.1.0",
     "@astrojs/tailwind": "6.0.2",
     "@types/js-yaml": "4.0.9",

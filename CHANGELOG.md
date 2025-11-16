@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.0.0](https://github.com/snyssen/webb-launcher/compare/v2.6.13...v3.0.0) (2025-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* update targeted platforms
+
+### Bug Fixes
+
+* align all shortcuts to left ([d19677a](https://github.com/snyssen/webb-launcher/commit/d19677aac4237204e264c73b8c206f8906fa3fde))
+* **deps:** update all non-major dependencies ([#377](https://github.com/snyssen/webb-launcher/issues/377)) ([93967ff](https://github.com/snyssen/webb-launcher/commit/93967ff695abf787ab43a5f62d992ca523926b98))
+* **deps:** update all non-major dependencies ([#380](https://github.com/snyssen/webb-launcher/issues/380)) ([71b9b82](https://github.com/snyssen/webb-launcher/commit/71b9b82e5593ebc612a16a46ae10279b1114dbaa))
+* **deps:** update dependency astro to v5.15.6 [security] ([#382](https://github.com/snyssen/webb-launcher/issues/382)) ([6f6b6d7](https://github.com/snyssen/webb-launcher/commit/6f6b6d741e38ef13d3dbd0d4c33b1cd96636116e))
+* **deps:** update dependency js-yaml to v4.1.1 [security] ([#384](https://github.com/snyssen/webb-launcher/issues/384)) ([4e77989](https://github.com/snyssen/webb-launcher/commit/4e7798982007da5108c0d80b44287ee66b60d6b9))
+* remove .astro folder and add it to .gitignore ([5dad41e](https://github.com/snyssen/webb-launcher/commit/5dad41e39b93f4e3748c7cb8b14189e532a75a3c))
+* update targeted platforms ([fd54062](https://github.com/snyssen/webb-launcher/commit/fd54062a3e8bc535d88105fa53e20882cd90ade1))
+
 ## [2.6.13](https://github.com/snyssen/webb-launcher/compare/v2.6.12...v2.6.13) (2025-10-26)
 
 

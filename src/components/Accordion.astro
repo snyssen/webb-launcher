@@ -4,16 +4,15 @@ export interface Props {
   icon_classes?: string;
 }
 
-const {title, icon_classes} = Astro.props;
+const { title, icon_classes } = Astro.props;
 ---
-<details class="flex flex-col justify-center items-center">
-  <summary class="cursor-pointer py-3 px-4
-    bg-clip-text bg-300% hover:animate-gradient-pulse-once
-    hover:text-transparent hover:bg-gradient-to-r
-  hover:marker:text-gray-900 dark:hover:marker:text-gray-100
-  ">
+
+<details class="flex flex-col justify-start">
+  <summary
+    class="cursor-pointer py-3 px-4 bg-clip-text bg-300% hover:animate-gradient-pulse-once hover:text-transparent hover:bg-gradient-to-r hover:marker:text-gray-900 dark:hover:marker:text-gray-100"
+  >
     {title}
-    {icon_classes && <i class:list={[icon_classes, 'text-2xl']}></i>}
+    {icon_classes && <i class:list={[icon_classes, "text-2xl"]} />}
   </summary>
-  <slot></slot>
+  <slot />
 </details>

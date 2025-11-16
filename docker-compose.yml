@@ -5,7 +5,7 @@ services:
       context: .
       args:
         APP_VERSION: dev
-    env_file:
-      - ./.env
+    environment:
+      - SHORTCUTS=$SHORTCUTS
     ports:
       - "80:8080"

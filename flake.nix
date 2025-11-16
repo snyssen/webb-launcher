@@ -10,10 +10,11 @@
     {
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
-          nixpkgs-fmt
+          nixfmt
+          nixd
           just
           pre-commit
-          nodejs_22
+          nodejs_24
         ];
       };
     }

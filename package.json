@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@nanostores/preact": "1.0.0",
-    "astro": "5.15.9",
+    "astro": "5.16.0",
     "express": "5.1.0",
     "js-yaml": "4.1.1",
-    "nanostores": "1.0.1"
+    "nanostores": "1.1.0"
   },
   "devDependencies": {
     "@astrojs/node": "9.5.1",

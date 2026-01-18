@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.3](https://github.com/snyssen/webb-launcher/compare/v3.0.2...v3.0.3) (2026-01-17)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#402](https://github.com/snyssen/webb-launcher/issues/402)) ([1f96913](https://github.com/snyssen/webb-launcher/commit/1f96913bdd2c348ac20b6e5f4f07a5f96add3e5e))
+* **deps:** update all non-major dependencies ([#409](https://github.com/snyssen/webb-launcher/issues/409)) ([b21e30e](https://github.com/snyssen/webb-launcher/commit/b21e30e87c34524f1268a66cac4b91e5b36f151e))
+* **deps:** update all non-major dependencies ([#410](https://github.com/snyssen/webb-launcher/issues/410)) ([82618f8](https://github.com/snyssen/webb-launcher/commit/82618f89a113a7a1a896b7041967f02321a5a664))
+* **deps:** update all non-major dependencies ([#413](https://github.com/snyssen/webb-launcher/issues/413)) ([2f9a0d3](https://github.com/snyssen/webb-launcher/commit/2f9a0d32978b1fab217dfd12671c35d7d7121ae7))
+* **deps:** update dependency astro to v5.16.6 ([#405](https://github.com/snyssen/webb-launcher/issues/405)) ([5f659c0](https://github.com/snyssen/webb-launcher/commit/5f659c05cf59c2341cf073b9ff6b7d7e48a3939d))
+
 ## [3.0.2](https://github.com/snyssen/webb-launcher/compare/v3.0.1...v3.0.2) (2025-12-06)
 
 

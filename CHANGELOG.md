@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.6](https://github.com/snyssen/webb-launcher/compare/v3.0.5...v3.0.6) (2026-02-28)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#427](https://github.com/snyssen/webb-launcher/issues/427)) ([88f8148](https://github.com/snyssen/webb-launcher/commit/88f81484e258d2ca2dca51d436760f13e70c022f))
+
 ## [3.0.5](https://github.com/snyssen/webb-launcher/compare/v3.0.4...v3.0.5) (2026-02-21)
 
 

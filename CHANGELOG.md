@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.7](https://github.com/snyssen/webb-launcher/compare/v3.0.6...v3.0.7) (2026-03-20)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#438](https://github.com/snyssen/webb-launcher/issues/438)) ([ec65d1b](https://github.com/snyssen/webb-launcher/commit/ec65d1bcc11b61e0a5973dcfc9558f57aa02a30a))
+* **deps:** update dependency @nanostores/preact to v1.1.0 ([#442](https://github.com/snyssen/webb-launcher/issues/442)) ([691fd88](https://github.com/snyssen/webb-launcher/commit/691fd88305ab95999a32cf6113bb641e712439d7))
+
 ## [3.0.6](https://github.com/snyssen/webb-launcher/compare/v3.0.5...v3.0.6) (2026-03-05)
 
 

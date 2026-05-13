@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Use class-based dark mode (matching Tailwind v3 darkMode: 'class') */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Custom font family (prepend Octarine Light before defaults) */
+  --font-sans: "Octarine Light", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Extra breakpoints for large screens */
+  --breakpoint-3xl: 1824px;
+  --breakpoint-4xl: 2248px;
+
+  /* Custom animation */
+  --animate-gradient-pulse-once: gradient-slide-left-right 1.5s ease-out forwards;
+}
+
+@keyframes gradient-slide-left-right {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@layer base {
+  html {
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply min-h-screen m-0;
+  }
+}
+
+@layer utilities {
+  /* Custom background-size utilities (equivalent to Tailwind v3 theme extension) */
+  .bg-150\% {
+    background-size: 150%;
+  }
+  .bg-200\% {
+    background-size: 200%;
+  }
+  .bg-250\% {
+    background-size: 250%;
+  }
+  .bg-300\% {
+    background-size: 300%;
+  }
+  .bg-350\% {
+    background-size: 350%;
+  }
+  .bg-400\% {
+    background-size: 400%;
+  }
+}
+
+@layer components {
+  .frosted-glass {
+    @apply backdrop-blur bg-gray-100/50 dark:bg-slate-800/50;
+  }
+
+  .frosted-glass-panel {
+    @apply backdrop-blur bg-gray-100/50 dark:bg-slate-800/50 shadow-md rounded-xl;
+  }
+}

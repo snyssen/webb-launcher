@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import node from "@astrojs/node";
 
 import preact from "@astrojs/preact";
@@ -7,8 +7,11 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  integrations: [tailwind(), preact()],
+  integrations: [preact()],
   adapter: node({
     mode: "middleware",
   }),
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

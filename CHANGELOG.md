@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.9](https://github.com/snyssen/webb-launcher/compare/v3.0.8...v3.0.9) (2026-07-01)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#460](https://github.com/snyssen/webb-launcher/issues/460)) ([070b2a1](https://github.com/snyssen/webb-launcher/commit/070b2a1bf84fefead0a090b895e1f05d7fcd85ad))
+* **deps:** update all non-major dependencies ([#462](https://github.com/snyssen/webb-launcher/issues/462)) ([317307d](https://github.com/snyssen/webb-launcher/commit/317307d10580c9ce106fe4fc3f10efebad6ca14d))
+* **deps:** update all non-major dependencies ([#465](https://github.com/snyssen/webb-launcher/issues/465)) ([94f1e80](https://github.com/snyssen/webb-launcher/commit/94f1e8083392abea5d24423f031eec926386b0e8))
+* **deps:** update all non-major dependencies ([#467](https://github.com/snyssen/webb-launcher/issues/467)) ([214a24a](https://github.com/snyssen/webb-launcher/commit/214a24a800a39949341eea505244701ae7d5c015))
+* **deps:** update all non-major dependencies ([#469](https://github.com/snyssen/webb-launcher/issues/469)) ([299b8c6](https://github.com/snyssen/webb-launcher/commit/299b8c699c6a14ac06f64630f335e33c2d2372b3))
+* **deps:** update all non-major dependencies ([#473](https://github.com/snyssen/webb-launcher/issues/473)) ([4a619dc](https://github.com/snyssen/webb-launcher/commit/4a619dc50c8de5f8cc428db31cdaaa09b15464ce))
+* **deps:** update all non-major dependencies to v6.4.7 ([#471](https://github.com/snyssen/webb-launcher/issues/471)) ([299f503](https://github.com/snyssen/webb-launcher/commit/299f5033c2295a62fd80131e183d2c84369cfb4a))
+* **deps:** update dependency astro to v6.3.8 ([#464](https://github.com/snyssen/webb-launcher/issues/464)) ([778c5ed](https://github.com/snyssen/webb-launcher/commit/778c5eddc30ea04bb6ece12272a1bafa01d00166))
+* **deps:** update dependency js-yaml to v5 ([#475](https://github.com/snyssen/webb-launcher/issues/475)) ([88f7ee3](https://github.com/snyssen/webb-launcher/commit/88f7ee359369ccb949c83c7608b5679946eaf1b8))
+
 ## [3.0.8](https://github.com/snyssen/webb-launcher/compare/v3.0.7...v3.0.8) (2026-05-13)
 
 

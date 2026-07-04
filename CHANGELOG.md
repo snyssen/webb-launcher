@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.10](https://github.com/snyssen/webb-launcher/compare/v3.0.9...v3.0.10) (2026-07-04)
+
+
+### Bug Fixes
+
+* update usage of js-yaml since removal of default export ([03ec711](https://github.com/snyssen/webb-launcher/commit/03ec7119c38c632fdeca877f3d89c10795b0bf94))
+
 ## [3.0.9](https://github.com/snyssen/webb-launcher/compare/v3.0.8...v3.0.9) (2026-07-01)
 
 

@@ -5,7 +5,7 @@ import UpperLeftWidget from '../components/UpperLeftWidget.astro';
 import UpperRightWidget from '../components/UpperRightWidget.astro';
 import ShortcutsGrid from '../components/ShortcutsGrid.astro';
 
-import yaml, { YAMLException } from 'js-yaml';
+import { load, YAMLException } from 'js-yaml';
 import type { Shortcut } from '../models/Shortcut';
 
 const logAndReturnError = (logMessage: string, clientMessage: string, error?: any) => {
@@ -23,7 +23,7 @@ if (!shortcutsRaw)
 
 let shortcuts: Shortcut[] | unknown;
 try {
-  shortcuts = yaml.load(shortcutsRaw as string, {
+  shortcuts = load(shortcutsRaw as string, {
     onWarning: (warning: YAMLException) =>
       console.warn('Yaml loading returned a warning.', warning)
   });

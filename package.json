@@ -14,7 +14,7 @@
     "@nanostores/preact": "1.1.0",
     "astro": "7.1.6",
     "express": "5.2.1",
-    "js-yaml": "5.2.2",
+    "js-yaml": "5.2.3",
     "nanostores": "1.4.2"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
     "@types/js-yaml": "4.0.9",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
-    "preact": "10.29.7",
+    "preact": "10.29.8",
     "tailwindcss": "4.3.3"
   }
 }

@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0.13](https://github.com/snyssen/webb-launcher/compare/v3.0.12...v3.0.13) (2026-08-20)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#498](https://github.com/snyssen/webb-launcher/issues/498)) ([0bc1943](https://github.com/snyssen/webb-launcher/commit/0bc1943696026e82c47e8091d04666ed57410daa))
+* **deps:** update all non-major dependencies ([#500](https://github.com/snyssen/webb-launcher/issues/500)) ([c6df33e](https://github.com/snyssen/webb-launcher/commit/c6df33ede1f933793281d5eb2a6c78f1bd7e7680))
+* **deps:** update dependency nanostores to v1.5.0 ([#501](https://github.com/snyssen/webb-launcher/issues/501)) ([7eb14c7](https://github.com/snyssen/webb-launcher/commit/7eb14c7c1e869d82ec034416f59fe10095e478fc))
+
 ## [3.0.12](https://github.com/snyssen/webb-launcher/compare/v3.0.11...v3.0.12) (2026-08-10)
 
 

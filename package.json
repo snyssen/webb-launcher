@@ -12,17 +12,17 @@
   },
   "dependencies": {
     "@nanostores/preact": "1.1.0",
-    "astro": "7.3.2",
+    "astro": "7.3.3",
     "express": "5.2.1",
     "js-yaml": "5.4.2",
     "nanostores": "1.5.3"
   },
   "devDependencies": {
-    "@astrojs/node": "11.1.5",
+    "@astrojs/node": "11.1.6",
     "@astrojs/preact": "6.0.5",
     "@tailwindcss/vite": "4.3.3",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "24.13.4",
+    "@types/node": "24.13.5",
     "@types/react": "19.3.0",
     "preact": "10.29.8",
     "tailwindcss": "4.3.3"

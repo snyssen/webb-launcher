@@ -22,7 +22,7 @@
     "@astrojs/preact": "6.0.5",
     "@tailwindcss/vite": "4.3.3",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "24.13.5",
+    "@types/node": "24.13.6",
     "@types/react": "19.3.0",
     "preact": "10.29.8",
     "tailwindcss": "4.3.3"

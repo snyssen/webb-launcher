@@ -24,7 +24,7 @@
     "@types/js-yaml": "4.0.9",
     "@types/node": "24.19.0",
     "@types/react": "19.3.0",
-    "preact": "10.29.8",
+    "preact": "11.0.0",
     "tailwindcss": "4.3.3"
   }
 }

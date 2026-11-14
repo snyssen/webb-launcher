@@ -18,13 +18,13 @@
     "nanostores": "1.5.5"
   },
   "devDependencies": {
-    "@astrojs/node": "11.1.9",
-    "@astrojs/preact": "6.1.1",
-    "@tailwindcss/vite": "4.3.3",
+    "@astrojs/node": "11.1.12",
+    "@astrojs/preact": "6.1.4",
+    "@tailwindcss/vite": "4.3.5",
     "@types/js-yaml": "4.0.9",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "preact": "10.29.8",
-    "tailwindcss": "4.3.3"
+    "tailwindcss": "4.3.5"
   }
 }
